@@ -6,15 +6,15 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 11:06:14 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/04 18:02:11 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/06 09:34:30 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_bzero(void *s, size_t n)
 {
-	char *c;
+	unsigned char *c;
 
-	c = (char *)s;
+	c = (unsigned char *)s;
 	while (n-- > 0)
 		*c++ = 0;
 }
