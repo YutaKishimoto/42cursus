@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _ft_memset.c                                       :+:      :+:    :+:   */
+/*   _ft_memccpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 08:28:45 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/06 10:39:46 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/06 09:57:38 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/06 10:47:03 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *b, int c, size_t len)
+void	ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned char	uc;
-	void			*tmp;
+	unsigned char *d;
+	unsigned char uc;
 
+	d = (unsigned char *)dst;
 	uc = c;
-	tmp = b;
-	while (len-- > 0)
-		*(unsigned char *)tmp++ = uc;
-	return (b);
+	while (n-- > 0 && *src != c)
+	{
+		if (*src == 0)
+			return (NULL);
+		*d++ = *src++;
+	}
+	return (d);
 }

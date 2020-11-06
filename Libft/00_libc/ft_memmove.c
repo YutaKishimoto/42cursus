@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _ft_memset.c                                       :+:      :+:    :+:   */
+/*   _ft_memmove.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/04 08:28:45 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/06 10:39:46 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/06 10:47:25 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/06 10:54:19 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	*ft_memset(void *b, int c, size_t len)
+void	*memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	uc;
-	void			*tmp;
+	unsigned char d;
 
-	uc = c;
-	tmp = b;
+	d = (unsigned char *)dst;
 	while (len-- > 0)
-		*(unsigned char *)tmp++ = uc;
-	return (b);
+		*d++ = *src++;
+	return (dst);
 }
