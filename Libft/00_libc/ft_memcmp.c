@@ -1,13 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _ft_memchr.c                                       :+:      :+:    :+:   */
+/*   _ft_memcmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/06 11:11:46 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/06 11:24:36 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/07 09:46:27 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/07 10:07:41 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	memcmp(const void *s1, const void *s2, size_t n)
+{
+	unsigned char *uc1;
+	unsigned char *uc2;
 
+	uc1 = (unsigned char *)s1;
+	uc2 = (unsigned char *)s2;
+	while (n > 0)
+	{
+		if (*uc1 == *uc2)
+		{
+			uc1++;
+			uc2++;
+		}
+		else
+			return (*uc1 - *uc2);
+	}
+	return (0);
+}
