@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/09 16:17:57 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/09 16:53:16 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(void){
 /* ------------------ */
 /* -- memset --       */
 /* ------------------ */
-	printf("TEST ORIGINAL FUNCTIONS\n");
+	printf("TEST ORIGINAL FUNCTIONS\n\n");
 	printf("-----\ntest 1 : memset - fill a byte string with a byte value\n-----\n");
 	printf("void *memset(void *b, int c, size_t len)\n\n");
 
@@ -204,65 +204,103 @@ int main(void){
 /* isalpha            */
 /* ------------------ */
 	printf("-----\ntest16 : isalpha\n-----\n");
+	printf("int isalpha(int c)\n\n");
 
-/* Test Cases
- * print 0 - 127 all
- */
+/* Test print 0 - 128 */
+
 	i = -1;
 	while (i++ < 128)
 	{
 		c = i;
-		printf("i = %3d, char = '%c', return : %d\n", i, c, isalpha(i));
+		printf("i: %3d '%c', return:%d", i, c, isalpha(i));
+		if (i % 4 == 0)
+			printf("\n");
+		else
+			printf("\t");
 	}
+	printf("\n");
 
 /* ------------------ */
 /* isdigit            */
 /* ------------------ */
 	printf("-----\ntest17 : isdigit\n-----\n");
+	printf("int isdigit(int c)\n\n");
 
-/* Test Cases
- *
- *
- *
- */
+/* Test print 0 - 128 */
+	i = -1;
+	while (i++ < 128)
+	{
+		c = i;
+		printf("i: %3d '%c', return:%d", i, c, isdigit(i));
+		if (i % 4 == 0)
+			printf("\n");
+		else
+			printf("\t");
+	}
+	printf("\n");
 
 /* ------------------ */
 /* isalnum            */
 /* ------------------ */
 	printf("-----\ntest18 : isalnum\n-----\n");
+	printf("int isalnum(int c)\n\n");
 
-/* Test Cases
- *
- *
- *
- */
+/* Test print 0 - 128 */
+	i = -1;
+	while (i++ < 128)
+	{
+		c = i;
+		printf("i: %3d '%c', return:%d", i, c, isalnum(i));
+		if (i % 4 == 0)
+			printf("\n");
+		else
+			printf("\t");
+	}
+	printf("\n");
 
 /* ------------------ */
 /* isascii            */
 /* ------------------ */
 	printf("-----\ntest19 : isascii\n-----\n");
+	printf("int isascii(int c)\n\n");
 
-/* Test Cases
- *
- *
- *
- */
+/* Test print 0 - 128 */
+	i = -1;
+	while (i++ < 128)
+	{
+		c = i;
+		printf("i: %3d '%c', return:%d", i, c, isascii(i));
+		if (i % 4 == 0)
+			printf("\n");
+		else
+			printf("\t");
+	}
+	printf("\n");
 
 /* ------------------ */
 /* isprint            */
 /* ------------------ */
 	printf("-----\ntest20 : isprint\n-----\n");
+	printf("int isprint(int c)\n\n");
 
-/* Test Cases
- *
- *
- *
- */
+/* Test print 0 - 128 */
+	i = -1;
+	while (i++ < 128)
+	{
+		c = i;
+		printf("i: %3d '%c', return:%d", i, c, isprint(i));
+		if (i % 4 == 0)
+			printf("\n");
+		else
+			printf("\t");
+	}
+	printf("\n");
 
 /* ------------------ */
 /* toupper            */
 /* ------------------ */
 	printf("-----\ntest21 : toupper\n-----\n");
+	printf("int toupper(int c)\n\n");
 
 /* Test Cases
  *
@@ -274,6 +312,7 @@ int main(void){
 /* tolwer             */
 /* ------------------ */
 	printf("-----\ntest22 : tolwer\n-----\n");
+	printf("int tolower(int c)\n\n");
 
 /* Test Cases
  *
