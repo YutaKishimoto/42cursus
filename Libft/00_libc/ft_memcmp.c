@@ -6,11 +6,11 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:46:27 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/07 10:07:41 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/09 11:44:03 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char *uc1;
 	unsigned char *uc2;
