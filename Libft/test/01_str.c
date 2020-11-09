@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/09 21:11:42 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/09 22:17:06 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,44 +25,44 @@ int main(void){
 /* ------------------ */
 /* strlen             */
 /* ------------------ */
-	printf("-----\ntest 8 : strlen\n-----\n");
-	printf("");
+	printf("-----\ntest 8 : strlen\n");
+	printf("size_t strlen(const char *s)\n-----\n");
 
 /* ------------------ */
 /* strlcpy            */
 /* ------------------ */
-	printf("-----\ntest 9 : strlcpy\n-----\n");
-	printf("");
+	printf("-----\ntest 9 : strlcpy\n");
+	printf("size_t strlcpy(char *dst, const char *src, size_t dstsize)\n-----\n");
 
 /* ------------------ */
 /* strlcat            */
 /* ------------------ */
-	printf("-----\ntest10 : strlcat\n-----\n");
-	printf("");
+	printf("-----\ntest10 : strlcat\n");
+	printf("size_t strlcat(char *dst, const char *src, size_t dstsize)-----\n");
 
 /* ------------------ */
 /* strchr             */
 /* ------------------ */
-	printf("-----\ntest11 : strchr\n-----\n");
-	printf("");
+	printf("-----\ntest11 : strchr\n");
+	printf("char *strchr(const char *s, int c)-----\n");
 
 /* ------------------ */
 /* strrchr            */
 /* ------------------ */
-	printf("-----\ntest12 : strrchr\n-----\n");
-	printf("");
+	printf("-----\ntest12 : strrchr\n");
+	printf("char *strrchr(const char *s, int c)-----\n");
 
 /* ------------------ */
 /* strnstr            */
 /* ------------------ */
-	printf("-----\ntest13 : strnstr\n-----\n");
-	printf("");
+	printf("-----\ntest13 : strnstr\n");
+	printf("char *strnstr(const char *haystack, const char *needle, size_t len)-----\n");
 
 /* ------------------ */
 /* strncmp            */
 /* ------------------ */
-	printf("-----\ntest14 : strncmp\n-----\n");
-	printf("");
+	printf("-----\ntest14 : strncmp\n");
+	printf("int strncmp(const char *s1, const char *s2, size_t n)-----\n");
 
 	return (0);
 }
