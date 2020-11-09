@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/05 22:52:49 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/09 15:12:50 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ int main(void){
 	const int i_min = -2147483648;
 	const int i_zero = 0;
 
-	/* memset */
+
+
+/* ------------------ */
+/* -- memset --       */
+/* ------------------ */
 	printf("TEST ORIGINAL FUNCTIONS\n");
 	printf("-----\ntest 1 : memset - fill a byte string with a byte value\n-----\n");
 	printf("void *memset(void *b, int c, size_t len)\n\n");
@@ -32,16 +36,20 @@ int main(void){
  * 1-4. c = 48 // '0'
  */
 
-/* bzero */
+/* ------------------ */
+/* bzero              */
+/* ------------------ */
 	printf("-----\ntest 2 : bzero\n-----\n");
-	printf("void bzero(void *s, size_t n)\n\n")
+	printf("void bzero(void *s, size_t n)\n\n");
 
 /* Test Cases
  * 2-1. n = 0;
  * 2-2. n = int_MAX;
  */
 
-/* memcpy */
+/* ------------------ */
+/* memcpy             */
+/* ------------------ */
 	printf("-----\ntest 3 : memcpy\n-----\n");
 	printf("void *memcpy(void *restrict dst, const void *restrict src, int c, size_t n)");
 
@@ -51,7 +59,9 @@ int main(void){
  *
  */
 
-/* memccpy */
+/* ------------------ */
+/* memccpy            */
+/* ------------------ */
 	printf("-----\ntest 4 : memccpy\n-----\n");
 
 /* Test Cases
@@ -60,7 +70,9 @@ int main(void){
  *
  */
 
-/* memmove */
+/* ------------------ */
+/* memmove            */
+/* ------------------ */
 	printf("-----\ntest 5 : memmove\n-----\n");
 
 /* Test Cases
@@ -69,7 +81,9 @@ int main(void){
  *
  */
 
-/* memchr */
+/* ------------------ */
+/* memchr             */
+/* ------------------ */
 	printf("-----\ntest 6 : memchr\n-----\n");
 
 /* Test Cases
@@ -78,7 +92,9 @@ int main(void){
  *
  */
 
-/* memcmp */
+/* ------------------ */
+/* memcmp             */
+/* ------------------ */
 	printf("-----\ntest 7 : memcmp\n-----\n");
 
 /* Test Cases
@@ -87,7 +103,9 @@ int main(void){
  *
  */
 
-/* strlen */
+/* ------------------ */
+/* strlen             */
+/* ------------------ */
 	printf("-----\ntest 8 : strlen\n-----\n");
 
 
@@ -97,7 +115,9 @@ int main(void){
  *
  */
 
-/* strlcpy */
+/* ------------------ */
+/* strlcpy            */
+/* ------------------ */
 	printf("-----\ntest 9 : strlcpy\n-----\n");
 
 
@@ -107,7 +127,9 @@ int main(void){
  *
  */
 
-/* strlcat */
+/* ------------------ */
+/* strlcat            */
+/* ------------------ */
 	printf("-----\ntest10 : strlcat\n-----\n");
 
 
@@ -117,7 +139,9 @@ int main(void){
  *
  */
 
-/* strchr */
+/* ------------------ */
+/* strchr             */
+/* ------------------ */
 	printf("-----\ntest11 : strchr\n-----\n");
 
 
@@ -127,7 +151,9 @@ int main(void){
  *
  */
 
-/* strrchr */
+/* ------------------ */
+/* strrchr            */
+/* ------------------ */
 	printf("-----\ntest12 : strrchr\n-----\n");
 
 
@@ -137,7 +163,9 @@ int main(void){
  *
  */
 
-/* strnstr */
+/* ------------------ */
+/* strnstr            */
+/* ------------------ */
 	printf("-----\ntest13 : strnstr\n-----\n");
 
 
@@ -147,7 +175,9 @@ int main(void){
  *
  */
 
-/* strncmp */
+/* ------------------ */
+/* strncmp            */
+/* ------------------ */
 	printf("-----\ntest14 : strncmp\n-----\n");
 
 
@@ -157,7 +187,9 @@ int main(void){
  *
  */
 
-/* atoi */
+/* ------------------ */
+/* atoi               */
+/* ------------------ */
 	printf("-----\ntest15 : atoi\n-----\n");
 
 
@@ -167,7 +199,9 @@ int main(void){
  *
  */
 
-/* isalpha */
+/* ------------------ */
+/* isalpha            */
+/* ------------------ */
 	printf("-----\ntest16 : isalpha\n-----\n");
 
 /* Test Cases
@@ -176,7 +210,9 @@ int main(void){
  *
  */
 
-/* isdigit */
+/* ------------------ */
+/* isdigit            */
+/* ------------------ */
 	printf("-----\ntest17 : isdigit\n-----\n");
 
 /* Test Cases
@@ -185,7 +221,9 @@ int main(void){
  *
  */
 
-/* isalnum */
+/* ------------------ */
+/* isalnum            */
+/* ------------------ */
 	printf("-----\ntest18 : isalnum\n-----\n");
 
 /* Test Cases
@@ -194,7 +232,9 @@ int main(void){
  *
  */
 
-/* isascii */
+/* ------------------ */
+/* isascii            */
+/* ------------------ */
 	printf("-----\ntest19 : isascii\n-----\n");
 
 /* Test Cases
@@ -203,7 +243,9 @@ int main(void){
  *
  */
 
-/* isprint */
+/* ------------------ */
+/* isprint            */
+/* ------------------ */
 	printf("-----\ntest20 : isprint\n-----\n");
 
 /* Test Cases
@@ -212,7 +254,9 @@ int main(void){
  *
  */
 
-/* toupper */
+/* ------------------ */
+/* toupper            */
+/* ------------------ */
 	printf("-----\ntest21 : toupper\n-----\n");
 
 /* Test Cases
@@ -221,7 +265,9 @@ int main(void){
  *
  */
 
-/* tolwer */
+/* ------------------ */
+/* tolwer             */
+/* ------------------ */
 	printf("-----\ntest22 : tolwer\n-----\n");
 
 /* Test Cases
@@ -230,7 +276,9 @@ int main(void){
  *
  */
 
-/* calloc */
+/* ------------------ */
+/* calloc             */
+/* ------------------ */
 	printf("-----\ntest23 : calloc\n-----\n");
 
 /* Test Cases
@@ -239,89 +287,10 @@ int main(void){
  *
  */
 
-/* strdup */
+/* ------------------ */
+/* strdup             */
+/* ------------------ */
 	printf("-----\ntest24 : strdup\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* substr*/
-	printf("-----\ntest25 : substr\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* strjoin */
-	printf("-----\ntest26 : strjoin\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* split */
-	printf("-----\ntest27 : split\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* itoa */
-	printf("-----\ntest28 : itoa\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* strmapi */
-	printf("-----\ntest29 : strmapi\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* putchar_fd */
-	printf("-----\ntest30 : putchar_fd\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* putstr_fd */
-	printf("-----\ntest31 : putstr_fd\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* putendl_fd */
-	printf("-----\ntest32 : putendl_fd\n-----\n");
-
-/* Test Cases
- *
- *
- *
- */
-
-/* putnbr_fd */
-	printf("-----\ntest33 : putnbr_fd\n-----\n");
 
 /* Test Cases
  *
