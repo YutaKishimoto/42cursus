@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/09 15:12:50 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/09 16:17:57 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int main(void){
 	const int i_Max = 2147483647;
 	const int i_min = -2147483648;
 	const int i_zero = 0;
-
-
+	int i = 0;
+	char c;
 
 /* ------------------ */
 /* -- memset --       */
@@ -51,7 +51,7 @@ int main(void){
 /* memcpy             */
 /* ------------------ */
 	printf("-----\ntest 3 : memcpy\n-----\n");
-	printf("void *memcpy(void *restrict dst, const void *restrict src, int c, size_t n)");
+	printf("void *memcpy(void *restrict dst, const void *restrict src, int c, size_t n)\n\n");
 
 /* Test Cases
  * 3-1.
@@ -63,6 +63,7 @@ int main(void){
 /* memccpy            */
 /* ------------------ */
 	printf("-----\ntest 4 : memccpy\n-----\n");
+	printf("");
 
 /* Test Cases
  *
@@ -205,10 +206,14 @@ int main(void){
 	printf("-----\ntest16 : isalpha\n-----\n");
 
 /* Test Cases
- *
- *
- *
+ * print 0 - 127 all
  */
+	i = -1;
+	while (i++ < 128)
+	{
+		c = i;
+		printf("i = %3d, char = '%c', return : %d\n", i, c, isalpha(i));
+	}
 
 /* ------------------ */
 /* isdigit            */
