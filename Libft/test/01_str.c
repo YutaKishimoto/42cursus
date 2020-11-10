@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/09 22:17:06 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/10 23:04:11 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,22 @@ int main(void){
 /* ------------------ */
 	printf("-----\ntest 9 : strlcpy\n");
 	printf("size_t strlcpy(char *dst, const char *src, size_t dstsize)\n-----\n");
+
+/* test 1 abort ?? */
+	char dst1[6] = "123";
+	printf("set char dst1 = 123\n");
+
+	const char *src1 = "1234567";
+	printf("set const char src1 = 1234567\n");
+
+	size_t dstsize1 = strlen(dst1);
+	printf("set size_t dstsize1 = strlen(dst1) = (3)\n");
+
+	printf("dst1_len = %lu, src1_len = %lu, dstsize = %zu \n", strlen(dst1), strlen(src1), dstsize1);
+
+	size_t ret1 = strlcpy(dst1, src1, 3);
+	printf("strlcpy done.\n");
+	printf("test 1 : ret is %zu \n", ret1);
 
 /* ------------------ */
 /* strlcat            */
