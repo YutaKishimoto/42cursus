@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/10 23:04:11 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/12 21:42:17 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,24 @@ int main(void){
 /* ------------------ */
 /* strlen             */
 /* ------------------ */
-	printf("-----\ntest 8 : strlen\n");
-	printf("size_t strlen(const char *s)\n-----\n");
+	printf("## test 8 : strlen");
+	printf("#### size_t strlen(const char *s)");
+
+	char *s1 = "";
+	char *s2 = "a";
+	char *s3 = " ";
+	char *s4 = "abcdefghij";
+
+	printf("s1 = \"%s\", strlen(s1) = %lu\n", s1, strlen(s1));
+	printf("s2 = \"%s\", strlen(s2) = %lu\n", s2, strlen(s2));
+	printf("s3 = \"%s\", strlen(s3) = %lu\n", s3, strlen(s3));
+	printf("s4 = \"%s\", strlen(s4) = %lu\n", s4, strlen(s4));
 
 /* ------------------ */
 /* strlcpy            */
 /* ------------------ */
-	printf("-----\ntest 9 : strlcpy\n");
-	printf("size_t strlcpy(char *dst, const char *src, size_t dstsize)\n-----\n");
+	printf("## test 9 : strlcpy");
+	printf("#### size_t strlcpy(char *dst, const char *src, size_t dstsize)");
 
 /* test 1 abort ?? */
 	char dst1[6] = "123";
@@ -53,32 +63,32 @@ int main(void){
 /* ------------------ */
 /* strlcat            */
 /* ------------------ */
-	printf("-----\ntest10 : strlcat\n");
-	printf("size_t strlcat(char *dst, const char *src, size_t dstsize)-----\n");
+	printf("## test10 : strlcat");
+	printf("#### size_t strlcat(char *dst, const char *src, size_t dstsize)");
 
 /* ------------------ */
 /* strchr             */
 /* ------------------ */
-	printf("-----\ntest11 : strchr\n");
-	printf("char *strchr(const char *s, int c)-----\n");
+	printf("## test11 : strchr");
+	printf("#### char *strchr(const char *s, int c)");
 
 /* ------------------ */
 /* strrchr            */
 /* ------------------ */
-	printf("-----\ntest12 : strrchr\n");
-	printf("char *strrchr(const char *s, int c)-----\n");
+	printf("## test12 : strrchr");
+	printf("#### char *strrchr(const char *s, int c)");
 
 /* ------------------ */
 /* strnstr            */
 /* ------------------ */
-	printf("-----\ntest13 : strnstr\n");
-	printf("char *strnstr(const char *haystack, const char *needle, size_t len)-----\n");
+	printf("## test13 : strnstr");
+	printf("#### char *strnstr(const char *haystack, const char *needle, size_t len)");
 
 /* ------------------ */
 /* strncmp            */
 /* ------------------ */
-	printf("-----\ntest14 : strncmp\n");
-	printf("int strncmp(const char *s1, const char *s2, size_t n)-----\n");
+	printf("## test14 : strncmp");
+	printf("#### int strncmp(const char *s1, const char *s2, size_t n)");
 
 	return (0);
 }

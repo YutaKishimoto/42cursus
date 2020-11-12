@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/12 19:51:22 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/12 22:11:04 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,74 +22,6 @@ int main(void){
 	int i = 0;
 	char c = 0;
 	char *str;
-
-	printf("# atoi, is_funcs test cases\n");
-/* ------------------ */
-/* atoi               */
-/* ------------------ */
-	printf("## test15 : atoi\n");
-	printf("#### int atoi(const char *str)\n\n");
-
-	/* TEST */
-	printf("### [test cases]\n");
-	printf("#### [str,\tatoi(str)]\n");
-
-	str = "2147483647";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-2147483648";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "2147483648";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-2147483649";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "020";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-020";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "0x4a";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-0x4a";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "++++1234";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "----1234";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "++-+1234";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "4294967294";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "4294967295";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "4294967296";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "4294967297";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "4294967298";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "17179869184";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "9223372036854775805";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "9223372036854775806";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "9223372036854775807";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "9223372036854775808";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "9223372036854775809";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-9223372036854775805";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-9223372036854775806";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-9223372036854775807";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-9223372036854775808";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "-9223372036854775809";
-	printf("[%s,\t%d]\n", str, atoi(str));
-	str = "1.234";
-	printf("[%s,\t%d]\n", str, atoi(str));
 
 /* ------------------ */
 /* isalpha            */
