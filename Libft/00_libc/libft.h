@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _ft_isdigit.c                                      :+:      :+:    :+:   */
+/*   _libft.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 11:55:18 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/12 23:54:24 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/12 23:43:11 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/12 23:53:41 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
-{
-	return ('0' <= c && c <= '9');
-}
+#ifndef		LIBFT_H
+# define	LIBFT_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+/* mem- prottype */
+
+/* str- prottype */
+
+/* is- prottype */
+int		ft_isdigit(int c);
+int		ft_isspace(int c);
+
+#endif
