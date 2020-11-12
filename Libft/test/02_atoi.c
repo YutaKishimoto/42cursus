@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/12 22:14:29 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/12 22:43:24 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,19 +35,19 @@ int main(void){
 	printf("#### [str,\tatoi(str)]\n");
 
 	str = "2147483647";
-	printf("[%s,\t%d]\n", str, atoi(str));
+	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "-2147483648";
-	printf("[%s,\t%d]\n", str, atoi(str));
+	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "2147483648";
-	printf("[%s,\t%d]\n", str, atoi(str));
+	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "-2147483649";
-	printf("[%s,\t%d]\n", str, atoi(str));
+	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "   483649";
-	printf("[%s,\t%d]\n", str, atoi(str));
+	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "-  483649";
-	printf("[%s,\t%d]\n", str, atoi(str));
+	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "   -483649";
-	printf("[%s,\t%d]\n", str, atoi(str));
+	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "0000020";
 	printf("[%s,\t%d]\n", str, atoi(str));
 	str = "-00000000000000020";
