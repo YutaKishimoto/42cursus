@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/09 21:12:53 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/12 18:55:38 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,38 +20,103 @@ int main(void){
 	const int i_min = -2147483648;
 	const int i_zero = 0;
 	int i = 0;
-	char c;
+	char c = 0;
+	char *str;
 
+	printf("# atoi, is_funcs test cases\n");
 /* ------------------ */
 /* atoi               */
 /* ------------------ */
-	printf("-----\ntest15 : atoi\n-----\n");
-	printf("");
+	printf("## test15 : atoi\n");
+	printf("#### int atoi(const char *str)\n\n");
+
+	/* TEST */
+	printf("### [test cases]\n");
+	printf("#### [str,\tatoi(str)]\n");
+
+	str = "2147483647";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-2147483648";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "2147483648";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-2147483649";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "020";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-020";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "0x4a";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-0x4a";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "++++1234";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "----1234";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "++-+1234";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "4294967294";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "4294967295";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "4294967296";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "4294967297";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "4294967298";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "17179869184";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "9223372036854775805";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "9223372036854775806";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "9223372036854775807";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "9223372036854775808";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "9223372036854775809";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-9223372036854775805";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-9223372036854775806";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-9223372036854775807";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-9223372036854775808";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "-9223372036854775809";
+	printf("[%s,\t%d]\n", str, atoi(str));
+	str = "1.234";
+	printf("[%s,\t%d]\n", str, atoi(str));
 
 /* ------------------ */
 /* isalpha            */
 /* ------------------ */
-	printf("-----\ntest16 : isalpha\n-----\n");
-	printf("int isalpha(int c)\n\n");
+	printf("## test16 : isalpha\n");
+	printf("#### int isalpha(int c)\n\n");
 
 /* Test print 0 - 128 */
-	i = -1;
+	i = -10;
+	printf("### [test cases]\n");
+	printf("#### [i, 'c', return]\n");
 	while (i++ < 128)
 	{
 		c = i;
-		printf("i: %3d '%c', return:%d", i, c, isalpha(i));
-		if (i % 4 == 0)
+		printf("[%3d, '%c', %d]", i, c, isalpha(i));
+		if (i % 10 == 0)
 			printf("\n");
 		else
-			printf("\t");
+			printf(", ");
 	}
 	printf("\n");
 
 /* ------------------ */
 /* isdigit            */
 /* ------------------ */
-	printf("-----\ntest17 : isdigit\n-----\n");
-	printf("int isdigit(int c)\n\n");
+	printf("## test17 : isdigit\n");
+	printf("#### int isdigit(int c)\n\n");
 
 /* Test print 0 - 128 */
 	i = -1;
@@ -69,8 +134,8 @@ int main(void){
 /* ------------------ */
 /* isalnum            */
 /* ------------------ */
-	printf("-----\ntest18 : isalnum\n-----\n");
-	printf("int isalnum(int c)\n\n");
+	printf("## test18 : isalnum\n");
+	printf("#### int isalnum(int c)\n\n");
 
 /* Test print 0 - 128 */
 	i = -1;
@@ -88,8 +153,8 @@ int main(void){
 /* ------------------ */
 /* isascii            */
 /* ------------------ */
-	printf("-----\ntest19 : isascii\n-----\n");
-	printf("int isascii(int c)\n\n");
+	printf("## test19 : isascii\n");
+	printf("#### int isascii(int c)\n\n");
 
 /* Test print 0 - 128 */
 	i = -1;
@@ -107,8 +172,8 @@ int main(void){
 /* ------------------ */
 /* isprint            */
 /* ------------------ */
-	printf("-----\ntest20 : isprint\n-----\n");
-	printf("int isprint(int c)\n\n");
+	printf("## test20 : isprint\n");
+	printf("#### int isprint(int c)\n\n");
 
 /* Test print 0 - 128 */
 	i = -1;
@@ -126,8 +191,8 @@ int main(void){
 /* ------------------ */
 /* toupper            */
 /* ------------------ */
-	printf("-----\ntest21 : toupper\n-----\n");
-	printf("int toupper(int c)\n\n");
+	printf("## test21 : toupper\n");
+	printf("#### int toupper(int c)\n\n");
 
 /* Test print 0 - 128 */
 	i = -1;
@@ -145,8 +210,8 @@ int main(void){
 /* ------------------ */
 /* tolwer             */
 /* ------------------ */
-	printf("-----\ntest22 : tolwer\n-----\n");
-	printf("int tolower(int c)\n\n");
+	printf("## test22 : tolwer\n");
+	printf("#### int tolower(int c)\n\n");
 
 /* Test print 0 - 128 */
 	i = -1;
