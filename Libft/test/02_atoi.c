@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/13 01:04:54 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/13 01:47:52 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,12 @@ int main(void){
 	str = "-9223372036854775809";
 	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "1.234";
+	printf("[%s,\t%d]\n\n", str, atoi(str));
+	str = "18446744073709551616";
+	printf("[%s,\t%d]\n\n", str, atoi(str));
+	str = "184467440737095516160";
+	printf("[%s,\t%d]\n\n", str, atoi(str));
+	str = "1844674407370955161600";
 	printf("[%s,\t%d]\n\n", str, atoi(str));
 	return (0);
 }
