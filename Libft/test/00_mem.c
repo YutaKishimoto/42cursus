@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/09 21:10:45 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/12 19:44:46 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,45 +25,45 @@ int main(void){
 /* ------------------ */
 /* memset             */
 /* ------------------ */
-	printf("TEST ORIGINAL FUNCTIONS\n\n");
-	printf("-----\ntest 1 : memset\n-----\n");
-	printf("void *memset(void *b, int c, size_t len)\n\n");
+	printf("# TEST ORIGINAL FUNCTIONS");
+	printf("## test 1 : memset");
+	printf("#### void *memset(void *b, int c, size_t len)");
 
 /* ------------------ */
 /* bzero              */
 /* ------------------ */
-	printf("-----\ntest 2 : bzero\n-----\n");
-	printf("void bzero(void *s, size_t n)\n\n");
+	printf("## test 2 : bzero");
+	printf("#### void bzero(void *s, size_t n)");
 
 /* ------------------ */
 /* memcpy             */
 /* ------------------ */
-	printf("-----\ntest 3 : memcpy\n-----\n");
-	printf("void *memcpy(void *dst, const void *src, int c, size_t n)\n\n");
+	printf("## test 3 : memcpy");
+	printf("#### void *memcpy(void *dst, const void *src, int c, size_t n)");
 
 /* ------------------ */
 /* memccpy            */
 /* ------------------ */
-	printf("-----\ntest 4 : memccpy\n-----\n");
-	printf("void *memcpy(void *dst, const void *src, int c, size_t n)");
+	printf("## test 4 : memccpy");
+	printf("#### void *memcpy(void *dst, const void *src, int c, size_t n)");
 
 /* ------------------ */
 /* memmove            */
 /* ------------------ */
-	printf("-----\ntest 5 : memmove\n-----\n");
-	printf("void *memmove(void *dst, const coid *src, int c, size_t n)");
+	printf("## test 5 : memmove");
+	printf("#### void *memmove(void *dst, const coid *src, int c, size_t n)");
 
 /* ------------------ */
 /* memchr             */
 /* ------------------ */
-	printf("-----\ntest 6 : memchr\n-----\n");
-	printf("");
+	printf("## test 6 : memchr");
+	printf("#### void *memchr(const void *s, int c, size_t n)");
 
 /* ------------------ */
 /* memcmp             */
 /* ------------------ */
-	printf("-----\ntest 7 : memcmp\n-----\n");
-	printf("");
+	printf("## test 7 : memcmp");
+	printf("#### int memcmp(const void *s1, const void *s2, size_t n)");
 
 	return (0);
 }
