@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/12 22:45:56 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/13 01:04:54 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,16 @@ int main(void){
 	str = "0x4a";
 	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "-0x4a";
+	printf("[%s,\t%d]\n\n", str, atoi(str));
+	str = "+1234";
+	printf("[%s,\t%d]\n\n", str, atoi(str));
+	str = "++1234";
+	printf("[%s,\t%d]\n\n", str, atoi(str));
+	str = "+-1234";
+	printf("[%s,\t%d]\n\n", str, atoi(str));
+	str = "-+1234";
+	printf("[%s,\t%d]\n\n", str, atoi(str));
+	str = "--1234";
 	printf("[%s,\t%d]\n\n", str, atoi(str));
 	str = "++++1234";
 	printf("[%s,\t%d]\n\n", str, atoi(str));

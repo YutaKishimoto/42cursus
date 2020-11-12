@@ -6,26 +6,23 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/12 21:42:36 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/13 00:07:53 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/13 01:14:03 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include "libft.h"
-
 int	ft_atoi(const char *str)
 {
-	long	l;
-	int		minus;
+	unsigned long	l;
+	int				minus;
 
 	l = 0;
 	minus = 1;
 	while (ft_isspace(*str))
 		str++;
-	if (*str == '-')
+	if (*str == '-' || *str == '+')
 	{
-		minus = -1;
+		if (*str == '-')
+			minus = -1;
 		str++;
 	}
 	while (ft_isdigit(*str))
@@ -33,12 +30,16 @@ int	ft_atoi(const char *str)
 		l *= 10;
 		l += *str - '0';
 		str++;
+		if (minus == 1 && l > LONG_MAX)
+			return (-1);
+		if (minus == -1 && l > LONG_MIN * minus)
+			return (0);
 	}
 	return ((int)l * minus);
 }
 
 int	main(void){
-	char *s1 = "2147483647";
+	char *s1 = "2147483647     ";
 	char *s2 = "2147483648";
 	char *s3 = "-2147483648";
 	char *s4 = "-2147483649";
@@ -56,6 +57,9 @@ int	main(void){
 	char *s16 = "-9223372036854775807";
 	char *s17 = "-9223372036854775808";
 	char *s18 = "-9223372036854775809";
+	char *s19 = "+1234";
+	char *s20 = "++1234";
+	char *s21 = "-+1234";
 
 	printf("s = \t%s\natoi(s) = \t%d\nft_atoi(s) = \t%d\n\n", s1, atoi(s1), ft_atoi(s1));
 	printf("s = \t%s\natoi(s) = \t%d\nft_atoi(s) = \t%d\n\n", s2, atoi(s2), ft_atoi(s2));
@@ -75,6 +79,9 @@ int	main(void){
 	printf("s = \t%s\natoi(s) = \t%d\nft_atoi(s) = \t%d\n\n", s16, atoi(s16), ft_atoi(s16));
 	printf("s = \t%s\natoi(s) = \t%d\nft_atoi(s) = \t%d\n\n", s17, atoi(s17), ft_atoi(s17));
 	printf("s = \t%s\natoi(s) = \t%d\nft_atoi(s) = \t%d\n\n", s18, atoi(s18), ft_atoi(s18));
+	printf("s = \t%s\natoi(s) = \t%d\nft_atoi(s) = \t%d\n\n", s19, atoi(s19), ft_atoi(s19));
+	printf("s = \t%s\natoi(s) = \t%d\nft_atoi(s) = \t%d\n\n", s20, atoi(s20), ft_atoi(s20));
+	printf("s = \t%s\natoi(s) = \t%d\nft_atoi(s) = \t%d\n\n", s21, atoi(s21), ft_atoi(s21));
 
 	return (0);
 }

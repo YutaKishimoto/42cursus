@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _libft.h                                           :+:      :+:    :+:   */
+/*   int_max.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/12 23:43:11 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/13 00:54:31 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/13 00:38:41 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/13 00:39:47 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef		LIBFT_H
-# define	LIBFT_H
-
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include <limits.h>
 
-/* mem- prottype */
+int main(void){
+	int i = 111111111111111;
 
-/* str- prottype */
-
-/* is- prottype */
-int		ft_isdigit(int c);
-int		ft_isspace(int c);
-
-#endif
+	printf("%d, %x,", i, i);
+	return (0);
+}
