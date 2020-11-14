@@ -6,20 +6,50 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 20:52:09 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/14 21:11:06 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/15 01:50:17 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	
+/*
+ *
+ * VERY ROUGH ABOUT MEMORY MNGMNT, 
+ * only login struct,
+ * NEED TO deepthought.
+ *
+ */
 
-	s1[0] ?=  set[0] - set [j] == \0
-	TRUE >> s1[1] ?= ...
-		FALSE >> s1[i] ?= ...
-			TRUE >> s1[i - 1] ?= ...
-		trim = s1[i]_s[j]
-	return (trim)
+static int	ccmpset(char c, char const *set)
+{
+	int i;
+
+	i = 0;
+	while (set[i])
+	{
+		if (c = set[i])
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char		*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	len;
+	char	*trim;
+
+	len = ft_strlen(s1);
+	while (ccmpset(s1[len], set))
+		len--;
+	while (ccmpset(*s1, set))
+		s1++;
+	len = (&s1[len] - s1);
+	if (!(trim = (char *)malloc(len)))
+		return (NULL);
+	while (len-- > 0)
+		*trim++ = *s1++;
+	*s1 = '\0';
+	return (trim);
+}
