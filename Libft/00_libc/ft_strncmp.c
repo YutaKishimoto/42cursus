@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _ft_tolower.c                                      :+:      :+:    :+:   */
+/*   _ft_strncmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 12:33:02 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/14 13:48:20 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/14 14:26:00 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/14 14:43:11 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#incluide "libft.h"
+#include "libft.h"
 
-int	ft_tolower(int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (ft_isupper(c))
-		c += 32;
-	return (c);
+	while (n-- > 0 && (*s1++ == *s2++))
+		;
+	if (n == 0)
+		return (0);
+	else
+		return (int)(*(unsigned char *)(s1 - 1) - *(unsigned char *)(s2 - 1));
 }

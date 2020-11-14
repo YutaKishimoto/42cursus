@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _ft_tolower.c                                      :+:      :+:    :+:   */
+/*   _ft_strchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 12:33:02 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/14 13:48:20 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/14 13:21:51 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/14 14:01:19 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#incluide "libft.h"
+#include "libft.h"
 
-int	ft_tolower(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (ft_isupper(c))
-		c += 32;
-	return (c);
+	while (*s)
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	return (NULL);
 }
