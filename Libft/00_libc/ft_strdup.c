@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 15:02:13 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/14 15:10:11 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/14 16:04:55 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
-	char	*s2
+	char	*s2;
 
 	len = ft_strlen(s1);
 	if (!(s2 = (char *)malloc(len + 1)))
