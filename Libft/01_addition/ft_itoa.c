@@ -1,39 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/15 20:17:54 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/15 20:06:14 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/15 20:13:10 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.c"
+#include "libft.h"
 #include <stdlib.h>
 
-char	**ft_split(char const *s, char c)
+char	*ft_itoa(int n)
 {
-	char	**split;
+	char	*a;
 
-	if (!(split = (char **)malloc(ft_strlen(s) + 1)))
-		return (NULL);
-	while (*s)
-	{
-		if (*s != c)
-			**split++ = *s++;
-		else
-		{
-			**split++ = '\0';
-			if (!(*split = (char *)malloc(sizeof (char *))))
-			{
-				free (split);
-				return (NULL);
-			}
-			*split = split;
-		}
-	}
-	**split = (NULL);
-	return (split);
-}
+	if (n < 0)
+		
