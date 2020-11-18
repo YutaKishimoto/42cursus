@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _ft_strlcpy.c                                      :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/09 22:33:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/14 21:13:40 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/15 21:42:59 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.c"
+#include <stdlib.h>
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+char	**ft_split(char const *s, char c)
 {
-	size_t l;
+	char	**split;
 
-	l = ft_strlen(src);
-	while ((*src != 0) && (dstsize-- > 1))
-		*dst++ = *src++;
-	*dst = "\0";
-	return (l);
+	if (!(split = (char **)malloc(ft_strlen(s) + 1)))
+		return (NULL);
+	while (*s)
+	{
+		if (*s != c)
+			**split++ = *s++;
+		else
+		{
+			**split++ = '\0';
+			if (!(*split = (char *)malloc(sizeof (char *))))
+			{
+				free (split);
+				return (NULL);
+			}
+			*split = split;
+		}
+	}
+	**split = (NULL);
+	return (split);
 }
