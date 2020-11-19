@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:24:25 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/19 19:53:31 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/19 22:47:56 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,38 +16,9 @@
 #include <ctype.h>
 #include "libft.h"
 
-void	t_mem(){
-}
-
-void 	t_str(){
-}
-
-void	t_is(){
-}
-
-void	t_atoi(){
-}
-
-void	t_others(){
-}
-
-void	t_add(){
-}
-
-void	t_lst(){
-}
-
-void	t_all(){
-	t_mem();
-	t_str();
-	t_is();
-	t_others();
-	t_add();
-	t_lst();
-}
-
 /* put only '\n' */
 void	br(){printf("\n");}
+void	hr(){printf("- - - - - - - - - - \n");}
 
 /* change font color */
 void	f_bk(){printf("\x1b[30m");}		// black
@@ -70,6 +41,52 @@ void	b_m(){printf("\x1b[45m");}		// magenta
 void	b_c(){printf("\x1b[46m");}		// cyan
 void	b_w(){printf("\x1b[47m");}		// Gray
 void	b_def(){printf("\x1b[49m");}	// default
+
+void	t_mem(){
+}
+
+void 	t_str(){
+}
+
+void	t_is(){
+	hr();
+	printf("TEST 01 isalpha()\n");
+	printf("int isalpha(int c)\n\n");
+	printf("(c, isalpha(c), ft_(c))\n");
+	int i = -1;
+	while (i++ < 130)
+	{
+		printf("(%d, %d, %d)", i, isalpha(i), ft_isalpha(i));
+		if (i % 4)
+			printf("\n");
+		else
+			printf(", ");
+	}
+}
+
+void	t_atoi(){
+}
+
+void	t_others(){
+}
+
+void	t_add(){
+}
+
+void	t_lst(){
+}
+
+void	t_all(){
+	t_mem();
+	t_str();
+	t_is();
+	t_atoi();
+	t_others();
+	t_add();
+	t_lst();
+}
+
+
 
 int	main(void)
 {
