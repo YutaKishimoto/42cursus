@@ -1,33 +1,265 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/19 11:24:25 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/19 13:44:39 by tyamagis         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
 #include "libft.h"
+/*
+void	t_mem(void)
+{
+	char c;
+	while (1){
+		printf("--- --- --- --- ---\n");
+		printf("0 : test mem-\n");
+		printf("--- --- --- --- ---\n");
+		printf("0 : memset\n");
+		printf("1 : bzero\n");
+		printf("2 : memcpy\n");
+		printf("3 : memccpy\n");
+		printf("4 : memmove\n");
+		printf("5 : memchr\n");
+		printf("6 : memcmp\n");
+		printf("\nR : return main menu\n")
+			printf("\nQuit this program, press 'Ctrl + C'\n\n");
+		printf("SELECT your test\n\n >> ");
+		c = getchar();
+		getchar();
+		if (c == '0'){();}
+		else if (c == '1'){();}
+		else if (c == '2'){();}
+		else if (c == '3'){();}
+		else if (c == '4'){();}
+		else if (c == '5'){();}
+		else if (c == '6'){();}
+		else if (c == 'R'){return ;}
+		else
+		{
+			printf("! ! ! ! !\n\n");
+			printf("wrong number input. Try again\n\n >>");
+		}
+	}
+}
 
-int main(void){
-	char *s1 = "63410682753376583680";
-	char *s2 = "63410682753376583681";
-	char *s3 = "-63410682753376583680";
-	char *s4 = "-63410682753376583681";
-	char *s5 = "634106827533765836810";
-	char *s6 = "6341068275337658368100";
-	char *s7 = "63410682753376583681000";
-	char *s8 = "9223372036854775807";
-	char *s9 = "9223372036854775808";
-	char *s10 = "-9223372036854775808";
-	char *s11 = "-9223372036854775809";
+void	t_str(void)
+{
+	char c;
+	while (1){
+		printf("--- --- --- --- ---\n");
+		printf("1 : test str-\n");
+		printf("--- --- --- --- ---\n");
+		printf("0 : strlen\n");
+		printf("1 : strlcpy\n");
+		printf("2 : strlcat\n");
+		printf("3 : strchr\n");
+		printf("4 : strrchr\n");
+		printf("5 : strnstr\n");
+		printf("6 : strncmp\n");
+		printf("\nR : return main menu\n")
+			printf("\nQuit this program, press 'Ctrl + C'\n\n");
+		printf("SELECT your test\n\n >> ");
+		c = getchar();
+		getchar();
+		if (c == '0'){();}
+		else if (c == '1'){();}
+		else if (c == '2'){();}
+		else if (c == '3'){();}
+		else if (c == '4'){();}
+		else if (c == '5'){();}
+		else if (c == '6'){();}
+		else if (c == 'R'){return ;}
+		else
+		{
+			printf("! ! ! ! !\n\n");
+			printf("wrong number input. Try again\n\n >>");
+		}
+	}
 
-	printf("atoi_test[2] \n\n");
-	printf("str\tatoi(str)\tft_atoi(str)\n");
-	printf("%s\t%d\t%d\n", s1, atoi(s1), ft_atoi(s1));
-	printf("%s\t%d\t%d\n", s2, atoi(s2), ft_atoi(s2));
-	printf("%s\t%d\t%d\n", s3, atoi(s3), ft_atoi(s3));
-	printf("%s\t%d\t%d\n", s4, atoi(s4), ft_atoi(s4));
-	printf("%s\t%d\t%d\n", s5, atoi(s5), ft_atoi(s5));
-	printf("%s\t%d\t%d\n", s6, atoi(s6), ft_atoi(s6));
-	printf("%s\t%d\t%d\n", s7, atoi(s7), ft_atoi(s7));
-	printf("%s\t%d\t%d\n", s8, atoi(s8), ft_atoi(s8));
-	printf("%s\t%d\t%d\n", s9, atoi(s9), ft_atoi(s9));
-	printf("%s\t%d\t%d\n", s10, atoi(s10), ft_atoi(s10));
-	printf("%s\t%d\t%d\n", s11, atoi(s11), ft_atoi(s11));
+}
 
+void	t_is(void)
+{
+	char c;
+	while (1){
+		printf("--- --- --- --- ---\n");
+		printf("2 : test is-\n");
+		printf("--- --- --- --- ---\n");
+		printf("0 : isalpha\n");
+		printf("1 : isdigit\n");
+		printf("2 : isalnum\n");
+		printf("3 : isascii\n");
+		printf("4 : isprint\n");
+		printf("5 : toupper\n");
+		printf("6 : tolower\n");
+		printf("\nR : return main menu\n")
+			printf("\nQuit this program, press 'Ctrl + C'\n\n");
+		printf("SELECT your test\n\n >> ");
+		c = getchar();
+		getchar();
+		if (c == '0'){();}
+		else if (c == '1'){();}
+		else if (c == '2'){();}
+		else if (c == '3'){();}
+		else if (c == '4'){();}
+		else if (c == '5'){();}
+		else if (c == '6'){();}
+		else if (c == 'R'){return ;}
+		else
+		{
+			printf("! ! ! ! !\n\n");
+			printf("wrong number input. Try again\n\n >>");
+		}
+	}
+}
+
+void	t_atoi(void)
+{
+	char c;
+	while (1){
+		printf("--- --- --- --- ---\n");
+		printf("3 : test atoi\n");
+		printf("--- --- --- --- ---\n");
+	}
+}
+
+void	t_others(void)
+{
+	char c;
+	while (1){
+		printf("--- --- --- --- ---\n");
+		printf("4 : test calloc, strdup\n");
+		printf("--- --- --- --- ---\n");
+		printf("0 : calloc\n");
+		printf("1 : strdup\n");
+		printf("\nR : return main menu\n")
+			printf("\nQuit this program, press 'Ctrl + C'\n\n");
+		printf("SELECT your test\n\n >> ");
+		c = getchar();
+		getchar();
+		if (c == '0'){();}
+		else if (c == '1'){();}
+		else if (c == '2'){();}
+		else if (c == 'R'){return ;}
+		else
+		{
+			printf("! ! ! ! !\n\n");
+			printf("wrong number input. Try again\n\n >>");
+		}
+	}
+}
+
+void	t_add(void)
+{
+	char c;
+	while (1){
+		printf("--- --- --- --- ---\n");
+		printf("5 : test additional\n");
+		printf("--- --- --- --- ---\n");
+		printf("0 : memset\n");
+		printf("1 : bzero\n");
+		printf("2 : memcpy\n");
+		printf("3 : memccpy\n");
+		printf("4 : memmove\n");
+		printf("5 : memchr\n");
+		printf("6 : memcmp\n");
+		printf("\nR : return main menu\n")
+			printf("\nQuit this program, press 'Ctrl + C'\n\n");
+		printf("SELECT your test\n\n >> ");
+		c = getchar();
+		getchar();
+		if (c == '0'){();}
+		else if (c == '1'){();}
+		else if (c == '2'){();}
+		else if (c == '3'){();}
+		else if (c == '4'){();}
+		else if (c == '5'){();}
+		else if (c == '6'){();}
+		else if (c == 'R'){return ;}
+		else
+		{
+			printf("! ! ! ! !\n\n");
+			printf("wrong number input. Try again\n\n >>");
+		}
+	}
+}
+
+void	t_lst(void)
+{
+	char c;
+	while (1){
+		printf("--- --- --- --- ---\n");
+		printf("0 : test mem-\n");
+		printf("--- --- --- --- ---\n");
+		printf("0 : memset\n");
+		printf("1 : bzero\n");
+		printf("2 : memcpy\n");
+		printf("3 : memccpy\n");
+		printf("4 : memmove\n");
+		printf("5 : memchr\n");
+		printf("6 : memcmp\n");
+		printf("\nR : return main menu\n")
+			printf("\nQuit this program, press 'Ctrl + C'\n\n");
+		printf("SELECT your test\n\n >> ");
+		c = getchar();
+		getchar();
+		if (c == '0'){();}
+		else if (c == '1'){();}
+		else if (c == '2'){();}
+		else if (c == '3'){();}
+		else if (c == '4'){();}
+		else if (c == '5'){();}
+		else if (c == '6'){();}
+		else if (c == 'R'){return ;}
+		else
+		{
+			printf("! ! ! ! !\n\n");
+			printf("wrong number input. Try again\n\n >>");
+		}
+	}
+}
+*/
+int	main(void)
+{
+	char c;
+	while (1)
+	{
+		printf("/x1b[44m--- --- --- --- ---\n");
+		printf("this is the test each functions. \n");
+		printf("--- --- --- --- ---/x1b[m\n");
+		printf("input number for each test\n\n");
+		printf("0 : mem-\n");
+		printf("1 : str-\n");
+		printf("2 : is-\n");
+		printf("3 : atoi\n");
+		printf("4 : calloc, strdup\n");
+		printf("5 : Part2. additionnals\n");
+		printf("6 : Bonus\n");
+		printf("\nQuit this test, press 'Ctrl + C'\n\n");
+		printf("SELECT your test\n\n >> ");
+		c = getchar();
+		getchar();
+		if (c == '0'){t_mem();}
+		else if (c == '1'){t_str();}
+		else if (c == '2'){t_is();}
+		else if (c == '3'){t_atoi();}
+		else if (c == '4'){t_others();}
+		else if (c == '5'){t_add();}
+		else if (c == '6'){t_lst();}
+		else
+		{
+			printf("! ! ! ! !\n\n");
+			printf("wrong number input. Try again\n\n >>");
+		}
+	}
 	return (0);
 }
