@@ -6,9 +6,11 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 11:06:14 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/06 09:34:30 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:00:05 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

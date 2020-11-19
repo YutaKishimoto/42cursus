@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 20:52:09 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/15 01:50:17 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:32:59 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	ccmpset(char c, char const *set)
 	i = 0;
 	while (set[i])
 	{
-		if (c = set[i])
+		if (c == set[i])
 			return (1);
 		i++;
 	}
@@ -50,6 +50,6 @@ char		*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (len-- > 0)
 		*trim++ = *s1++;
-	*s1 = '\0';
+	*trim = '\0';
 	return (trim);
 }

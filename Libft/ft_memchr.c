@@ -6,9 +6,11 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 11:11:46 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/09 11:42:19 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:13:40 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

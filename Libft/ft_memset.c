@@ -6,9 +6,11 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 08:28:45 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/09 11:54:08 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:26:14 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
