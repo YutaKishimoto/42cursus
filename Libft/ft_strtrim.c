@@ -6,20 +6,12 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 20:52:09 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/19 23:32:59 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:41:58 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-/*
- *
- * VERY ROUGH ABOUT MEMORY MNGMNT, 
- * only login struct,
- * NEED TO deepthought.
- *
- */
 
 static int	ccmpset(char c, char const *set)
 {

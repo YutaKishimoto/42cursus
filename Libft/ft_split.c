@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/19 23:27:09 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/19 23:44:29 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	**ft_split(char const *s, char c)
 		else
 		{
 			**split++ = '\0';
-			if (!(*split = (char *)malloc(sizeof (char *))))
+			if (!(*split = (char *)malloc(sizeof(char *))))
 			{
-				free (split);
+				free(split);
 				return (NULL);
 			}
 			*split = split;
