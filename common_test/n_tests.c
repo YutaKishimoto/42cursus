@@ -6,19 +6,42 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 23:35:42 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/21 00:03:31 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/21 00:09:55 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** ----------------
 ** how to comment
-** 
+**
 ** LIKE THIS
 ** ----------------
 */
 
-int	main(void)
+void	f1(void)
+{
+}
+
+void	f2(void)
+{
+}
+
+void	f3(void)
+{
+}
+
+void	f4(void)
+{
+}
+
+/*
+** 6th func is forbidden.
+** void	f5(void)
+** {
+** }
+*/
+
+int		main(void)
 {
 	return (0);
 }
