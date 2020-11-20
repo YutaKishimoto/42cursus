@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:24:25 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/19 22:47:56 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/21 00:27:06 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 /* put only '\n' */
 void	br(){printf("\n");}
-void	hr(){printf("- - - - - - - - - - \n");}
+void	hr(){printf("\n- - - - - - - - - - \n");}
 
 /* change font color */
 void	f_bk(){printf("\x1b[30m");}		// black
@@ -42,38 +42,294 @@ void	b_c(){printf("\x1b[46m");}		// cyan
 void	b_w(){printf("\x1b[47m");}		// Gray
 void	b_def(){printf("\x1b[49m");}	// default
 
+/* ----------
+** 0 mem - 
+** ----------*/
 void	t_mem(){
+	/* memset*/
+	/* bzero*/
+	/* memcpy*/
+	/* memccpy*/
+	/* memmove*/
+	/* memchr*/
+	/* memcmp*/
 }
 
+/* ----------
+** 1 str - 
+** ----------*/
 void 	t_str(){
+	/* strlen*/
+	/* strlcpy*/
+	/* strlcat*/
+	/* strchr*/
+	/* strrchr*/
+	/* strnstr*/
+	/* strncmp*/
 }
+
+/* ----------------------------------
+** 
+** Use pointer to function
+**
+** maybe it makes codes simpler.
+**
+** ----------------------------------- */
+
+/*
+** void	istest(int t, char *f_name)
+** {
+** 	int lib_ret = 0;
+** 	int ft_ret = 0;
+** 	hr();
+** 	printf("is- TEST 0%d - %s\n", t, );
+** 	printf("int isalpha(int c)\n\n");
+** 	printf("(c, isalpha(c), ft_(c))\n");
+** 	int i = -1;
+** 	while (i++ < 130)
+** 	{
+** 		printf("(%d, %d, %d)", i, lib_ret, ft_let);
+** 		if (lib_ret != ft_ret)
+** 		{
+** 			f_r();printf("_!_NG_!_\n");f_def();
+** 		}
+** 		if (i % 4)
+** 			printf("\n");
+** 		else
+** 			printf(", ");
+** 	}
+** }
+**--------------------------------------*/
+
+/* ----------
+** 2 is - 
+** ----------*/
 
 void	t_is(){
+	/* 01. isalpha */
 	hr();
-	printf("TEST 01 isalpha()\n");
+	printf("is- TEST 01 - isalpha()\n");
 	printf("int isalpha(int c)\n\n");
-	printf("(c, isalpha(c), ft_(c))\n");
 	int i = -1;
+	int flag = 1;
 	while (i++ < 130)
 	{
-		printf("(%d, %d, %d)", i, isalpha(i), ft_isalpha(i));
-		if (i % 4)
-			printf("\n");
-		else
-			printf(", ");
+		if (isalpha(i) != ft_isalpha(i))
+		{
+			f_r();
+			printf("_!_NG_!_\t");
+			printf("(i : %d, original : %d, ft_ : %d)\n", i, isalpha(i), ft_isalpha(i));
+			f_def();
+			flag = 0;
+		}
+	}
+	if(flag == 1){f_g();printf("OK!\n");f_def();}
+
+	/* 02. isdigit */
+	hr();
+	printf("is- TEST 02 - isdigit()\n");
+	printf("int isdigit(int c)\n\n");
+	i = -1;
+	flag = 1;
+	while (i++ < 130)
+	{
+		if (isdigit(i) != ft_isdigit(i))
+		{
+			f_r();
+			printf("_!_NG_!_\t");
+			printf("(i : %d, original : %d, ft_ : %d)\n", i, isdigit(i), ft_isdigit(i));
+			f_def();
+			flag = 0;
+		}
+	}
+	if(flag == 1){f_g();printf("OK!\n");f_def();}
+
+	/* 03. isalnum */
+	hr();
+	printf("is- TEST 03 - isalnum()\n");
+	printf("int isalnum(int c)\n\n");
+	i = -1;
+	flag = 1;
+	while (i++ < 130)
+	{
+		if (isalnum(i) != ft_isalnum(i))
+		{
+			f_r();
+			printf("_!_NG_!_\t");
+			printf("(i : %d, original : %d, ft_ : %d)\n", i, isalnum(i), ft_isalnum(i));
+			f_def();
+			flag = 0;
+		}
+	}
+	if(flag == 1){f_g();printf("OK!\n");f_def();}
+
+	/* 04. isascii */
+	hr();
+	printf("is- TEST 04 - isascii()\n");
+	printf("int isascii(int c)\n\n");
+	i = -1;
+	flag = 1;
+	while (i++ < 130)
+	{
+		if (isascii(i) != ft_isascii(i))
+		{
+			f_r();
+			printf("_!_NG_!_\t");
+			printf("(i : %d, original : %d, ft_ : %d)\n", i, isascii(i), ft_isascii(i));
+			f_def();
+			flag = 0;
+		}
+	}
+	if(flag == 1){f_g();printf("OK!\n");f_def();}
+
+	/* 05. isprint */
+	hr();
+	printf("is- TEST 05 - isprint()\n");
+	printf("int isprint(int c)\n\n");
+	i = -1;
+	flag = 1;
+	while (i++ < 130)
+	{
+		if (isprint(i) != ft_isprint(i))
+		{
+			f_r();
+			printf("_!_NG_!_\t");
+			printf("(i : %d, original : %d, ft_ : %d)\n", i, isprint(i), ft_isprint(i));
+			f_def();
+			flag = 0;
+		}
+	}
+	if(flag == 1){f_g();printf("OK!\n");f_def();}
+
+	/* 06. toupper */
+	hr();
+	printf("is- TEST 06 - toupper()\n");
+	printf("int toupper(int c)\n\n");
+	i = -1;
+	flag = 1;
+	while (i++ < 130)
+	{
+		if (toupper(i) != ft_toupper(i))
+		{
+			f_r();printf("_!_NG_!_\t");
+			printf("(i : %d, original : %d, ft_ : %d)\n", i, toupper(i), ft_toupper(i));
+			f_def();
+			flag = 0;
+		}
+	}
+	if(flag == 1){f_g();printf("OK!\n");f_def();}
+
+	/* 07. tolower */
+	hr();
+	printf("is- TEST 07 - tolower()\n");
+	printf("int tolower(int c)\n\n");
+	i = -1;
+	flag = 1;
+	while (i++ < 130)
+	{
+		if (tolower(i) != ft_tolower(i))
+		{
+			f_r();printf("_!_NG_!_\t");
+			printf("(i : %d, original : %d, ft_ : %d)\n", i, tolower(i), ft_tolower(i));
+			f_def();
+		}
+	}
+	if(flag == 1){f_g();printf("OK!\n");f_def();}
+}
+
+/* ----------
+** 3 atoi 
+** ----------*/
+void	t_a(char *at){
+	if (atoi(at) != ft_atoi(at))
+	{
+		f_r();printf("_!_NG_!_\t");
+		printf("(%s, %d, %d)\n", at, atoi(at), ft_atoi(at));
+		f_def();
+	} else {
+		f_g();
+		printf("CASE : %s OK\n", at);
+		f_def();
 	}
 }
 
 void	t_atoi(){
+	printf("\nstandard int tests\n");
+	t_a("-2");
+	t_a("-1");
+	t_a("0");
+	t_a("1");
+	t_a("2");
+	t_a("2147483646");
+	t_a("2147483647");
+	t_a("2147483648");
+	t_a("-2147483647");
+	t_a("-2147483648");
+	t_a("-2147483649");
+	printf("\nother input tests\n");
+	t_a("+1234");
+	t_a("+-1234");
+	t_a("--1234");
+	t_a("-+1234");
+	t_a("1.234");
+	t_a("  1234");
+	t_a("\t1234");
+	t_a("0x123");
+	t_a("0001234");
+	t_a("000000001234");
+	printf("\n! not needed ! overlimit tests\n");
+	t_a("4294967294");
+	t_a("4294967295");
+	t_a("4294967296");
+	t_a("4294967297");
+	t_a("4294967298");
+	t_a("17179869183");
+	t_a("17179869184");
+	t_a("17179869185");
+	t_a("9223372036854775805");
+	t_a("9223372036854775806");
+	t_a("9223372036854775807");
+	t_a("9223372036854775808");
+	t_a("9223372036854775809");
+	t_a("-9223372036854775805");
+	t_a("-9223372036854775806");
+	t_a("-9223372036854775807");
+	t_a("-9223372036854775808");
+	t_a("-9223372036854775809");
+	t_a("63410682753376583680");
+	t_a("63410682753376583681");
+	t_a("63410682753376583682");
+	t_a("63410682753376583683");
 }
 
 void	t_others(){
+	/* calloc*/
+	/* strdup*/
 }
 
 void	t_add(){
+	/* substr*/
+	/* strjoin*/
+	/* strtrim*/
+	/* split*/
+	/* itoa*/
+	/* strmapi*/
+	/* putchar_fd*/
+	/* outstr_fd*/
+	/* putendl_fd*/
+	/* putnbr_fd*/
 }
 
 void	t_lst(){
+	/* ft_lstnew*/
+	/* ft_lstadd_front*/
+	/* ft_lstsize*/
+	/* ft_lstlast*/
+	/* ft_lstadd_back*/
+	/* ft_lstdelone*/
+	/* ft_lstclear*/
+	/* ft_lstiter*/
+	/* ft_lstmap*/
 }
 
 void	t_all(){
@@ -86,7 +342,7 @@ void	t_all(){
 	t_lst();
 }
 
-
+/* --- MAIN --- */
 
 int	main(void)
 {
