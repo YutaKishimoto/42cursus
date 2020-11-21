@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/12 19:44:46 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/22 05:08:18 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,35 @@ int main(void){
 	printf("## test 1 : memset");
 	printf("#### void *memset(void *b, int c, size_t len)");
 
+/*	TEST CODE	*/
+
+	char	mset_b[11] = "1234567890";
+	char	ft_mset_b[11] = "1234567890";
+	int		mset_c = 60;
+	size_t	mset_len = 0;
+
+	char	*og_r = memset(mset_b, mset_c, mset_len);
+	char	*ft_r = ft_memset(ft_mset_b, mset_c, mset_len);
+
+	printf("c = %d, len = %zu\n", mset_c, mset_len);
+	printf("original : \"%s, %p\"\n", og_r, og_r);
+	printf("ft_funcs : \"%s, %p\"\n\n", ft_r, ft_r);
+
+	while (len < 20)
+	{
+		char mset_b[11] = "1234567890";
+		char ft_mset_b[11] = "1234567890";
+		c = 60;
+		og_r = memset(s, c, len);
+		ft_r = ft_memset(s, c, len);
+		printf("c = %d, len = %zu\n", c, len);
+		printf("original : \"%s, %p\"\n", og_r, og_r);
+		printf("ft_funcs : \"%s, %p\"\n\n", ft_r, ft_r);
+		len++;
+	}
+
+	return (0);
+}
 /* ------------------ */
 /* bzero              */
 /* ------------------ */

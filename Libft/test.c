@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:24:25 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/21 01:07:26 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/22 05:26:25 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,45 @@ void	b_def(){printf("\x1b[49m");}	// default
 ** ----------*/
 void	t_mem(){
 	/* memset*/
+	printf("void *ft_memset(void *b, int c, size_t len);\n");
+	char *or;
+	char *fr;
+	int c = 48;
+	size_t len = 0;
+
+	while (len < 10)
+	{
+		c = 48;
+		while (c < 200)
+		{
+			char op[5] = "abcd";
+			char fp[5] = "abcd";
+			char *or = memset(op, c, len);
+			char *fr = memset(fp, c, len);
+
+			printf("original  : %s (& : %p) [c = %d, len = %zu]", or, or, c, len);
+			printf("ft_memset : %s (& : %p) [c = %d, len = %zu]", fr, fr, c, len);
+			c += 50;
+		}
+		len++;
+	}
+
+
 	/* bzero*/
+
+
 	/* memcpy*/
+
+
 	/* memccpy*/
+
+
 	/* memmove*/
+
+
 	/* memchr*/
+
+
 	/* memcmp*/
 }
 
