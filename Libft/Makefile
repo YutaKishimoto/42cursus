@@ -14,14 +14,19 @@ OBJ		:= $(SRC:.c=.o)
 
 .PHONY: all
 all: $(NAME)
-###
+
+$(NAME): $(OBJ)
+	ar r $(NAME) $^ 
+
+$(OGJ): $(SRC)
+	$(CC) -c $^ $(FLG) -o $@
 
 .PHONY: clean
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJ)
 
 .PHONY: fclean
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 .PHONY: re

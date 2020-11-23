@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 21:27:33 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/14 21:29:48 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/23 19:36:11 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,10 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	write(fd, &n, sizeof(int));
+	char	*a;
+	size_t	len;
+
+	*a = ft_itoa(n);
+	len = ft_strlen(a);
+	write(fd, a, len);
 }
