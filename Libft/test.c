@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:24:25 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/25 01:24:32 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/26 06:51:52 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -358,8 +358,54 @@ void	t_others(){
 
 void	t_add(){
 	/* substr*/
+/*
+#include <stdio.h>
+
+int main(void){
+	char *r;
+	char const *s = "1234567890";
+	unsigned int st = 0;
+	size_t l = 0;
+
+	while (st < 15)
+	{
+		l = 0;
+		while (l < 15)
+		{
+			r = ft_substr(s, st, l);
+			printf("%s : (%s, %d, %zu)\n", r, s, st, l);
+			l++;
+		}
+		st++;
+	}
+	return (0);
+}
+*/
 	/* strjoin*/
+/*
+#include <stdio.h>
+
+int main(void){
+	char *s1 = "abcde";
+	char *s2 = "ABCDE";
+	char *s3 = ft_strjoin(s1, s2);
+	printf("%p : %s", s3, s3);
+	return (0);
+}
+*/
 	/* strtrim*/
+/*
+#include <stdio.h>
+
+int	main(void){
+	char *s1 = "abcdebac";
+	char *set = "cab";
+	char *trim = ft_strtrim(s1, set);
+
+	printf("%s", trim);
+	return (0);
+}
+*/
 	/* split*/
 	/* itoa*/
 	/* strmapi*/

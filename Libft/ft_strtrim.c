@@ -6,42 +6,35 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 20:52:09 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/20 23:02:35 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/26 06:50:47 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static int	ccmpset(char c, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int i;
+	size_t	trmsize;
+	char	*trm;
+	char	*t;
 
-	i = 0;
-	while (set[i])
+	if ((trmsize = ft_strlen(s1)) > 0)
 	{
-		if (c == set[i])
-			return (1);
-		i++;
+		while (ft_strrchr(set, *(s1 + trmsize - 1)) && trmsize > 0)
+			trmsize--;
 	}
-	return (0);
-}
-
-char		*ft_strtrim(char const *s1, char const *set)
-{
-	size_t	len;
-	char	*trim;
-
-	len = ft_strlen(s1);
-	while (ccmpset(s1[len], set))
-		len--;
-	while (ccmpset(*s1, set))
-		s1++;
-	len = (&s1[len] - s1);
-	if (!(trim = (char *)malloc(len)))
+	if (trmsize != 0)
+	{
+		while (ft_strchr(set, *s1++))
+			trmsize--;
+		s1--;
+	}
+	if (!(trm = (char *)malloc(trmsize + 1)))
 		return (NULL);
-	while (len-- > 0)
-		*trim++ = *s1++;
-	*trim = '\0';
-	return (trim);
+	t = trm;
+	while (trmsize-- > 0)
+		*t++ = *s1++;
+	*t = '\0';
+	return (trm);
 }
