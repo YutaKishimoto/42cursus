@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 21:22:51 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/14 21:27:18 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/25 22:44:29 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, s, ft_strlen(s) + 1);
+	write(fd, s, ft_strlen(s));
 }
