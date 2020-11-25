@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 19:41:29 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/23 19:41:32 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/25 18:44:56 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ typedef struct		s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
+
+/*
+**	libfc funcs
+*/
 
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
@@ -47,14 +51,16 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
-int					ft_isspace(int c);
-int					ft_isupper(int c);
-int					ft_islower(int c);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 
 void				*ft_calloc(size_t count, size_t size);
 char				*ft_strdup(const char *s1);
+
+/*
+**	additional funcs
+*/
+
 char				*ft_substr(char const *s, unsigned int start, size_t n);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s1, char const *set);
@@ -66,6 +72,10 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 
+/*
+**	Libft BONUS funcs
+*/
+
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *n);
 int					ft_lstsize(t_list *lst);
@@ -76,5 +86,14 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst,
 		void *(*f)(void *), void (*del)(void *));
+
+/*
+**	myfuncs
+*/
+
+char				*ft_strrev(char *s);
+int					ft_isspace(int c);
+int					ft_isupper(int c);
+int					ft_islower(int c);
 
 #endif
