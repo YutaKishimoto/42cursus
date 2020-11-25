@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 14:04:56 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/25 19:50:18 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/26 07:48:53 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 char	*ft_strnstr(const char *hs, const char *ndl, size_t len)
 {
 	char	*s;
-	size_t	n_len;
-	int		i;
+	size_t	ndl_len;
 
 	s = (char *)hs;
-	i = 0;
-	n_len = ft_strlen(ndl);
-	if (n_len == 0)
+	ndl_len = ft_strlen(ndl);
+	if (ndl_len == 0)
 		return (s);
-	while (ft_strncmp(s, ndl, n_len) != 0)
+	while (ft_strncmp(s++, ndl, ndl_len) != 0)
 	{
-			return (s);
-		s++;
+		if ((ft_strlen(s) < ndl_len) || (len-- < 2))
+			return (NULL);
 	}
-	return (s);
+	if (ndl_len > len)
+		return (NULL);
+	return (--s);
 }
