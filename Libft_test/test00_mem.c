@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/22 05:08:18 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/25 01:17:46 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,13 @@ int main(void){
 /* ------------------ */
 /* memset             */
 /* ------------------ */
-	printf("# TEST ORIGINAL FUNCTIONS");
-	printf("## test 1 : memset");
-	printf("#### void *memset(void *b, int c, size_t len)");
+
+	printf("# TEST ORIGINAL FUNCTIONS\n");
+	printf("## test 1 : memset\n");
+	printf("#### void *memset(void *b, int c, size_t len)\n");
 
 /*	TEST CODE	*/
-
+	/*
 	char	mset_b[11] = "1234567890";
 	char	ft_mset_b[11] = "1234567890";
 	int		mset_c = 60;
@@ -55,44 +56,50 @@ int main(void){
 		printf("ft_funcs : \"%s, %p\"\n\n", ft_r, ft_r);
 		len++;
 	}
-
-	return (0);
-}
+	*/
 /* ------------------ */
 /* bzero              */
 /* ------------------ */
-	printf("## test 2 : bzero");
-	printf("#### void bzero(void *s, size_t n)");
+
+	printf("## test 2 : bzero\n");
+	printf("#### void bzero(void *s, size_t n)\n");
 
 /* ------------------ */
 /* memcpy             */
 /* ------------------ */
-	printf("## test 3 : memcpy");
-	printf("#### void *memcpy(void *dst, const void *src, int c, size_t n)");
+	printf("## test 3 : memcpy\n");
+	printf("#### void *memcpy(void *dst, const void *src, int c, size_t n)\n");
 
 /* ------------------ */
 /* memccpy            */
 /* ------------------ */
-	printf("## test 4 : memccpy");
-	printf("#### void *memcpy(void *dst, const void *src, int c, size_t n)");
+	printf("## test 4 : memccpy\n");
+	printf("#### void *memcpy(void *dst, const void *src, int c, size_t n)\n");
 
 /* ------------------ */
 /* memmove            */
 /* ------------------ */
-	printf("## test 5 : memmove");
-	printf("#### void *memmove(void *dst, const coid *src, int c, size_t n)");
+	printf("## test 5 : memmove\n");
+	printf("#### void *memmove(void *dst, const coid *src, int c, size_t n)\n");
+
+	void *v1_1 = NULL;
+	void *v1_2 = NULL;
+	void *v1_3 = NULL;
+
+	v1_3 = ft_memmove(v1_1, v1_2, 5);
+	printf("%d, %d", v1_1, v1_3);
 
 /* ------------------ */
 /* memchr             */
 /* ------------------ */
-	printf("## test 6 : memchr");
-	printf("#### void *memchr(const void *s, int c, size_t n)");
+	printf("## test 6 : memchr\n");
+	printf("#### void *memchr(const void *s, int c, size_t n)\n");
 
 /* ------------------ */
 /* memcmp             */
 /* ------------------ */
-	printf("## test 7 : memcmp");
-	printf("#### int memcmp(const void *s1, const void *s2, size_t n)");
+	printf("## test 7 : memcmp\n");
+	printf("#### int memcmp(const void *s1, const void *s2, size_t n)\n");
 
 	return (0);
 }

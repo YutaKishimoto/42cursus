@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 11:15:35 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/14 21:12:38 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/25 00:54:33 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,17 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t l;
+	size_t ld;
+	size_t ls;
 
-	l = ft_strlen(src);
-	while (*dst)
-		dst++;
-	while (*src)
+	ld = ft_strlen(dst);
+	ls = ft_strlen(src);
+	if (dstsize < ld)
+		return (ls + dstsize);
+	dst += ld;
+	dstsize -= ld;
+	while (dstsize-- > 1 && *src)
 		*dst++ = *src++;
 	*dst = '\0';
-	return (dstsize + l + 1);
+	return (ld + ls);
 }

@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 12:13:31 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/12 21:42:17 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/24 21:04:42 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,22 @@ int main(void){
 /* strlcat            */
 /* ------------------ */
 	printf("## test10 : strlcat");
-	printf("#### size_t strlcat(char *dst, const char *src, size_t dstsize)");
+	printf("#### size_t strlcat(char *dst, const char *src, size_t dstsize)\n\n");
+	
+	char lcat_dst[5] = "abcd";
+	char lcat_src[10] = "123456789";
+	int lcat_ret = strlcat(lcat_dst, lcat_src, 3);
+	printf("str = \"%s\", return = %d \n", lcat_dst, lcat_ret);
+
+	char lcat_dst1[5] = "abcd";
+	char lcat_src1[10] = "123456789";
+	int lcat_ret1 = strlcat(lcat_dst1, lcat_src1, 4);
+	printf("str = \"%s\", return = %d \n", lcat_dst1, lcat_ret1);
+
+	char lcat_dst2[5] = "abcd";
+	char lcat_src2[10] = "123456789";
+	int lcat_ret2 = strlcat(lcat_dst2, lcat_src2, 5);
+	printf("str = \"%s\", return = %d \n", lcat_dst2, lcat_ret2);
 
 /* ------------------ */
 /* strchr             */

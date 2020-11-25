@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 10:47:25 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/15 21:41:09 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/25 01:30:14 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (len-- > 0)
 			*(d + len) = *(s + len);
 	}
-	else
+	else if (s != d)
 	{
 		while (len-- > 0)
 			*d++ = *s++;

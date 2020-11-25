@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 09:46:27 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/19 23:25:20 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/24 11:24:02 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	uc1 = (unsigned char *)s1;
 	uc2 = (unsigned char *)s2;
-	while (n > 0)
+	while (n-- > 0)
 	{
 		if (*uc1 == *uc2)
 		{

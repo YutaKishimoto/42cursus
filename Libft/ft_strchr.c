@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 13:21:51 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/19 23:28:51 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/24 03:56:21 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s)
+	char	ch;
+
+	ch = (char)c;
+	while (*s != ch)
 	{
-		if (*s == c)
-			return (s);
-		s++;
+		if (*s++ == 0)
+			return (0);
 	}
-	return (NULL);
+	return ((char *)s);
 }
