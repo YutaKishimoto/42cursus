@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:24:25 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/26 06:51:52 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/26 23:40:03 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -412,8 +412,59 @@ int	main(void){
 	/* putchar_fd*/
 	/* outstr_fd*/
 	/* putendl_fd*/
-	/* putnbr_fd*/
+	/* putnbr_fd
+
+#include <stdio.h>
+
+int main(void)
+{
+	int n = 0;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)12345;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)-123456;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)23456789012;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)21098765432;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)-12345678901;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)-123456789012;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)-234567890123;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)-2147483648;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)2147483647;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	n = (int)2147483648;
+	printf("\nn = %12d, ft_(%12d) is \n", n, n);
+	ft_putnbr_fd(n, 1);
+
+	return (0);
 }
+*/
 
 void	t_lst(){
 	/* ft_lstnew*/
