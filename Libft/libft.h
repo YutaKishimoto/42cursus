@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 19:41:29 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/25 18:44:56 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/26 10:08:35 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <string.h>
 # include <ctype.h>
 # include <limits.h>
+# include <unistd.h>
 
 typedef struct		s_list
 {
@@ -95,5 +96,6 @@ char				*ft_strrev(char *s);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
+char				*ft_strctrim(char const *s1, char const c);
 
 #endif
