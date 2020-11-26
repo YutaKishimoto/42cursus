@@ -12,6 +12,7 @@ ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c \
 ft_strctrim.c
 OBJ		:= $(SRC:.c=.o)
+TSRC	:= ft_libft_test.c
 
 .PHONY: all
 all: $(NAME)
@@ -24,7 +25,7 @@ $(OGJ): $(SRC)
 
 .PHONY: clean
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) libft.h.gch
 
 .PHONY: fclean
 fclean: clean
@@ -34,4 +35,8 @@ fclean: clean
 re: fclean all
 
 .PHONY: test
-test: ###
+test: $(OBJ)
+
+.PHONY: tclean
+tclean: fclean
+	rm -f test.*
