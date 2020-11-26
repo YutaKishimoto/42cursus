@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 20:06:14 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/26 23:41:08 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/26 23:58:37 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static char	cnt_index(long l)
 	char idx;
 
 	idx = 1;
-	while (l > 0)
+	while (l > 9)
 	{
 		l /= 10;
 		idx++;
@@ -43,7 +43,8 @@ char		*ft_itoa(int n)
 	idx = cnt_index(l);
 	if (!(s = (char *)malloc(idx + minus + 1)))
 		return (NULL);
-	*(s + idx + minus) = '\0';
+	s += idx + minus;
+	*s = '\0';
 	while (idx-- > 0)
 	{
 		*--s = '0' + l % 10;
