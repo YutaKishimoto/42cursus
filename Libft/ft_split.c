@@ -6,47 +6,84 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/26 22:40:19 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/27 02:49:30 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static char	*ft_subsplit(char *spl, char *t, char c)
+static size_t	ft_spltlen(const char *s, int c)
 {
-	while (*t)
+	size_t	len;
+	char	*end_s;
+
+	len = 0;
+	while (*s && (*s == c))
+		s++;
+	len = ft_strlen(s);
+	while (*(s + len - 1) == c && len > 0)
+		len--;
+	end_s = (char *)(s + len - 1);
+	while (s++ != end_s)
 	{
-		if ((*(t - 1) == c) && (*t++ != c))
-			*spl++ = '\0';
-		else if (*t != c)
-			*spl++ = *t++;
-		else
-			t++;
+		if (*(s - 1) == c && *s != c)
+			len--;
 	}
+	return (len);
+}
+
+static char		*ft_subsplt(char const *s, int len)
+{
+	char	*spl;
+	int		i;
+
+	if (!(spl = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	i = 0;
+	while (len-- > 0)
+	{
+		spl[i] = s[i];
+		i++;
+	}
+	spl[i] = '\0';
 	return (spl);
 }
 
-char		**ft_split(char const *s, char c)
+static char		**ft_splalloc(char **spl, char const *s, size_t len, char c)
+{
+	int		i;
+	int		idx;
+	size_t	cp;
+
+	i = 0;
+	idx = 0;
+	cp = 0;
+	while (s[i] && cp < len)
+	{
+		while (s[i] == c)
+			i++;
+		idx = i;
+		while (s[i] != c)
+			i++;
+		if (!(spl[cp++] = ft_subsplt(s + idx, i - idx)))
+		{
+			free(spl);
+			return (NULL);
+		}
+	}
+	spl[cp] = (NULL);
+	return (spl);
+}
+
+char			**ft_split(char const *s, char c)
 {
 	char	**spl;
-	char	*t;
-	size_t	t_len;
-	int		seq_c;
+	size_t	len;
 
-	if (!(t = ft_strctrim(s, c)))
+	len = ft_spltlen(s, c) + 2;
+	if (!(spl = (char **)malloc(sizeof(char *) * len)))
 		return (NULL);
-	t_len = ft_strlen(t);
-	while (*t)
-		seq_c = ((*t == c) && (*++t == c)) ? ++seq_c : seq_c;
-	if (!(spl = (char **)malloc((sizeof(char *)) * (t_len - seq_c + 1))))
-	{
-		free(t);
-		return (NULL);
-	}
-	t -= t_len;
-	spl = t;
-	t = ft_subsplit(spl, t, c);
-	*t = (NULL);
+	spl = ft_splalloc(spl, s, len, c);
 	return (spl);
 }
