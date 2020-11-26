@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/19 11:24:25 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/26 23:40:03 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/26 23:41:55 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -408,6 +408,38 @@ int	main(void){
 */
 	/* split*/
 	/* itoa*/
+/*
+#include <stdio.h>
+
+int main(void)
+{
+	int n = 0;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = 1234567890;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = (int)12345678901;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = (int)23456789012;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = (int)21098765432;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = (int)-12345678901;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = (int)-123456789012;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = (int)-234567890123;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = -2147483648;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = 2147483647;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	n = (int)2147483648;
+	printf("n = %12d, ft_itoa(%12d) is %12s\n", n, n, ft_itoa(n));
+	return (0);
+}
+
+*/
+
 	/* strmapi*/
 	/* putchar_fd*/
 	/* outstr_fd*/
