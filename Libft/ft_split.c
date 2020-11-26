@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/26 11:30:22 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/26 11:47:45 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,20 @@ char	**ft_split(char const *s, char c)
 {
 	char	**spl;
 	char	*t;
-	size_t	s_len;
+	size_t	t_len;
 	int		seq_c;
 
-	t = ft_strctrm(s, c);
+	t = ft_strctrim(s, c);
 	t_len = ft_strlen(t);
 	while (*t)
 		seq_c = ((*t == c) && (*++t == c)) ? ++seq_c : seq_c;
-	if (!(spl = (char **)malloc(s_len - seq_c + 1)))
+	if (!(spl = (char **)malloc(t_len - seq_c + 1)))
 		return (NULL);
 	t -= t_len;
 	while (*t)
 	{
 		if ((*(t - 1) == c) && (*t++ != c))
-		{
 			**spl++ = '\0';
-
 		else if (*t != c)
 			**spl++ = *t++;
 		else
