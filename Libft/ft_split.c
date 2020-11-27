@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/28 01:06:24 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/28 03:58:54 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static size_t	ft_spltlen(const char *s, int c)
 	len = ft_strlen(s);
 	while (*(s + len - 1) == c && len > 0)
 		len--;
-	end_s = (char *)(s + len);
+	end_s = (char *)(s + len + 1);
 	while (s++ != end_s)
 	{
 		if (*(s - 1) == c && *s == c)
@@ -46,30 +46,38 @@ static void		ft_spltfree(char **c, int i)
 	free(c);
 }
 
-char			**ft_split(char const *s, char c)
+static void		ft_spltcpy(char **sp, char const *s, char c )
 {
-	char	**sp;
-	int		i;
-	int		j;
+	int i;
+	int j;
 
-	if (!*s || !(sp = (char **)malloc(sizeof(char *))))
-		return (NULL);
-	if (!(*sp = (char *)malloc(ft_spltlen(s, c) + 1)))
-		return (NULL);
 	i = 0;
 	while (*s)
 	{
-		printf("%d", i);
 		j = 0;
 		while (*s && *s == c)
 			s++;
 		while (*s && (*s != c))
 			sp[i][j++] = *s++;
-		sp[i++][j] = '\0';
-		if (!(sp[i] = (char *)malloc(1)))
-			ft_spltfree(sp, i);
+		if (*s)
+		{
+			sp[i++][j] = '\0';
+			if (!(sp[i] = (char *)malloc(1)))
+				ft_spltfree(sp, i);
+		}
 	}
 	sp[i] = NULL;
+}
+
+char			**ft_split(char const *s, char c)
+{
+	char	**sp;
+
+	if (!*s || !(sp = (char **)malloc(sizeof(char *))))
+		return (NULL);
+	if (!(*sp = (char *)malloc(ft_spltlen(s, c) + 1)))
+		return (NULL);
+	ft_spltcpy(sp, s, c);
 	return (sp);
 }
 
