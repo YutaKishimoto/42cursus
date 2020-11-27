@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/28 00:15:24 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/28 01:06:24 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,23 +52,22 @@ char			**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
-	if (!(*s) || !(sp = (char **)malloc(1)))
+	if (!*s || !(sp = (char **)malloc(sizeof(char *))))
 		return (NULL);
-	if (!(*sp = (char *)malloc((ft_spltlen(s, c) + 1))))
+	if (!(*sp = (char *)malloc(ft_spltlen(s, c) + 1)))
 		return (NULL);
-	while (*s && (*s == c))
-		s++;
 	i = 0;
 	while (*s)
 	{
+		printf("%d", i);
 		j = 0;
-		while (*s && *s != c)
+		while (*s && *s == c)
+			s++;
+		while (*s && (*s != c))
 			sp[i][j++] = *s++;
 		sp[i++][j] = '\0';
 		if (!(sp[i] = (char *)malloc(1)))
-			ft_spltfree(sp, i - 1);
-		while (*s && *s == c)
-			s++;
+			ft_spltfree(sp, i);
 	}
 	sp[i] = NULL;
 	return (sp);
