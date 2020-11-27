@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/28 03:58:54 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/28 04:18:59 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,16 +84,29 @@ char			**ft_split(char const *s, char c)
 int				main(void)
 {
 	int i;
+	int j;
 
 	char *s1 = ",,a,bc,,cde,,,defg,e,,,fgh,,,,";
 	char c = ',';
 	char **r1 = ft_split(s1, c);
 
 	i = 0;
-	printf("split\"%s\"\n\n", s1);
+	printf("----\nsplit : \"%s\"\n\n", s1);
 	while (r1[i])
 	{
-		printf("r1[%d] : \"%s\"\n", i, r1[i]);
+		printf("r1[%d] : \"%s\"\t%12p\n", i, r1[i], r1[i]);
+		i++;
+	}
+	i = 0;
+	j = 0;
+	while (r1[i])
+	{
+		j = 0;
+		while (r1[i][j])
+		{
+			printf("r1[%d][%d] : %c : %12s\n", i, j, r1[i][j], &r1[i][j]);
+			j++;
+		}
 		i++;
 	}
 
@@ -102,10 +115,22 @@ int				main(void)
 	char **r2 = ft_split(s2, c2);
 
 	i = 0;
-	printf("split\"%s\"\n\n", s2);
+	printf("----\nsplit : \"%s\"\n\n", s2);
 	while (r2[i])
 	{
-		printf("r2[%d] : \"%s\"\n", i, r2[i]);
+		printf("r2[%d] : \"%s\"\t%12p\n", i, r2[i], r2[i]);
+		i++;
+	}
+	i = 0;
+	j = 0;
+	while (r2[i])
+	{
+		j = 0;
+		while (r2[i][j])
+		{
+			printf("r2[%d][%d] : %c : %12s\n", i, j, r2[i][j], &r2[i][j]);
+			j++;
+		}
 		i++;
 	}
 
@@ -114,10 +139,22 @@ int				main(void)
 	char **r3 = ft_split(s3, c3);
 
 	i = 0;
-	printf("split\"%s\"\n\n", s3);
+	printf("----\nsplit : \"%s\"\n\n", s3);
 	while (r3[i])
 	{
-		printf("r1[%d] : \"%s\"\n", i, r3[i]);
+		printf("r3[%d] : \"%s\"\t%12p\n", i, r3[i], r3[i]);
+		i++;
+	}
+	i = 0;
+	j = 0;
+	while (r3[i])
+	{
+		j = 0;
+		while (r3[i][j])
+		{
+			printf("r3[%d][%d] : %c : %12s\n", i, j, r3[i][j], &r3[i][j]);
+			j++;
+		}
 		i++;
 	}
 
