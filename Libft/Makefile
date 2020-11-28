@@ -11,14 +11,7 @@ ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
 ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c \
 ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
-
-BNS		:= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
-
 OBJ		:= $(SRC:.c=.o)
-BOBJ	:= $(BNS:.c=.o)
-
-TSRC	:= ft_libft_test.c
 
 .SUFFIXES: .c .o
 
@@ -31,10 +24,6 @@ $(NAME): $(OBJ)
 .c.o:
 	$(CC) $(FLG) -c $<
 
-.PHONY: bonus
-bonus: $(OBJ) $(BOBJ)
-	ar r $(NAME) $^
-
 .PHONY: clean
 clean:
 	rm -f $(OBJ) $(BOBJ) libft.h.gch
@@ -45,10 +34,3 @@ fclean: clean
 
 .PHONY: re
 re: fclean all
-
-.PHONY: test
-test: $(OBJ)
-
-.PHONY: tclean
-tclean: fclean
-	rm -f test.*
