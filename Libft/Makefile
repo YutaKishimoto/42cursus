@@ -13,9 +13,14 @@ ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 OBJ		:= $(SRC:.c=.o)
 
+BNS		:= ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c \
+ft_lstsize.c ft_lstlast.c ft_lstdelone.c ft_lstclear.c \
+ft_lstmap.c ft_lstiter.c
+BOBJ	:= $(BNS:.c=.o)
+
 .SUFFIXES: .c .o
 
-.PHONY: all
+.PHONY: all clean fclean re bonus
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -24,13 +29,12 @@ $(NAME): $(OBJ)
 .c.o:
 	$(CC) $(FLG) -c $<
 
-.PHONY: clean
 clean:
 	rm -f $(OBJ) $(BOBJ) libft.h.gch
 
-.PHONY: fclean
 fclean: clean
 	rm -f $(NAME)
 
-.PHONY: re
 re: fclean all
+
+bonus: $(BOBJ) all

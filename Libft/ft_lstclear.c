@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   _ft_memchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/06 11:11:46 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/30 01:03:54 by tyamagis         ###   ########.fr       */
+/*   Created: 2020/11/30 04:10:35 by tyamagis          #+#    #+#             */
+/*   Updated: 2020/11/30 05:13:47 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	unsigned char *us;
-	unsigned char uc;
+	t_list *crt;
+	t_list *tmp;
 
-	us = (unsigned char *)s;
-	uc = (unsigned char)c;
-	while (n-- > 0)
+	crt = *lst;
+	while (crt->next)
 	{
-		if (*us == uc)
-			return ((void *)us);
-		us++;
+		crt = *lst;
+		tmp = crt->next;
+		ft_lstdelone(crt, del);
+		(*del)(crt->next);
+		free(crt->next);
+		free(crt);
+		*lst = tmp;
 	}
-	return (NULL);
 }
