@@ -6,14 +6,14 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/15 19:45:53 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/30 03:35:53 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/11/30 14:10:24 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-size_t	ctidx(char const *s, char c)
+static size_t	ctidx(char const *s, char c)
 {
 	size_t	idx;
 
@@ -24,10 +24,10 @@ size_t	ctidx(char const *s, char c)
 			idx++;
 		s++;
 	}
-	return (idx);
+	return (idx + 1);
 }
 
-size_t	ctwds(char const *s, char c)
+static size_t	ctwds(char const *s, char c)
 {
 	size_t	wds;
 
@@ -37,17 +37,17 @@ size_t	ctwds(char const *s, char c)
 		wds++;
 		s++;
 	}
-	return (wds);
+	return (wds + 1);
 }
 
-void	spfree(char **sp, int i)
+static void		spfree(char **sp, int i)
 {
 	while (i-- > 0)
 		free(sp[i]);
 	free(sp);
 }
 
-int		splt(char **sp, char const *s, char c)
+static int		splt(char **sp, char const *s, char c)
 {
 	int i;
 	int j;
@@ -75,7 +75,7 @@ int		splt(char **sp, char const *s, char c)
 	return (1);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**sp;
 

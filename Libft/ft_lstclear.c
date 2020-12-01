@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 04:10:35 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/30 05:13:47 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/12/01 10:39:08 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list *crt;
 	t_list *tmp;
 
+	if (!(lst) || !(*del))
+		return ;
 	crt = *lst;
-	while (crt->next)
+	while (*lst)
 	{
-		crt = *lst;
 		tmp = crt->next;
-		ft_lstdelone(crt, del);
-		(*del)(crt->next);
-		free(crt->next);
-		free(crt);
+		ft_lstdelone(crt, *(del));
 		*lst = tmp;
+		crt = *lst;
 	}
+	*lst = NULL;
 }

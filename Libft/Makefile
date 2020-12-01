@@ -37,4 +37,5 @@ fclean: clean
 
 re: fclean all
 
-bonus: $(BOBJ) all
+bonus: $(BOBJ) $(OBJ)
+	ar r $(NAME) $^

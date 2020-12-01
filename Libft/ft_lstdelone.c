@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 04:05:32 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/11/30 05:14:37 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/12/01 05:57:47 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !(*del))
+		return ;
 	(*del)(lst->content);
-	free(lst->content);
+	free(lst);
 }
