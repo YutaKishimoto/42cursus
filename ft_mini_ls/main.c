@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 02:15:47 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/12/04 23:39:23 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/12/05 07:57:24 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,19 @@ void	db(void)
 	printf("\n-----\n!! check !!\n-----\n\n");
 }
 
-void	add_ls(t_ls *ls, char *name, struct stat *buf)
+void	add_ls(t_ls ls, struct dirent *dir, struct stat *buf)
 {
-	ls->fname = name;
-	ls->mtime = buf->st_mtimespec.tv_sec;
-	ls->nsec = buf->st_mtimespec.tv_nsec;
+	db();
+	ls.fname = dir->d_name;
+	ls.mtime = buf->st_mtimespec.tv_sec;
+	ls.nsec = buf->st_mtimespec.tv_nsec;
 }
 
 int		main(int ac, char *av[])
 {
 	DIR				*dp;
 	struct dirent	*dir;
-	struct stat		*buf;
+	struct stat		buf;
 	size_t			num_f;
 	t_ls			*t_flist;
 	int				i;
@@ -68,7 +69,6 @@ int		main(int ac, char *av[])
 			num_f++;
 		}
 	}
-	closedir(dp);
 	if (!(dp = opendir(".")))
 	{
 		perror("Err: opendir");
@@ -82,12 +82,12 @@ int		main(int ac, char *av[])
 	i = 0;
 	while ((dir = readdir(dp)))
 	{
-		stat(dir->d_name, buf);
-		add_ls(&t_flist[i], dir->d_name, buf);
+		stat(dir->d_name, &buf);
+		add_ls(t_flist[i], &dir, &buf);
 		/* printf ------------------------- */
-		printf("*t_flist->fname%s\n", t_flist[i].fname);
-		printf("*t_flist->mtime%lu\n", t_flist[i].mtime);
-		printf("*t_flist->nsec%lu\n", t_flist[i].nsec);
+		printf("t_flist[%d]->fname : %s\n", i, t_flist[i].fname);
+		printf("t_flist[%d]->mtime : %lu\n", i, t_flist[i].mtime);
+		printf("t_flist[%d]->nsec : %lu\n", i, t_flist[i].nsec);
 		i++;
 	}
 	closedir(dp);
