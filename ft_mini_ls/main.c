@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 02:15:47 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/12/05 07:57:24 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/12/07 19:24:52 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,30 @@ typedef struct	s_ls
 	unsigned long	nsec;
 }				t_ls;
 
-void	db(void)
+char	*ft_strdup(const char *s1)
 {
+	size_t	len;
+	char	*s2;
+
+	len = ft_strlen(s1);
+	if (!(s2 = (char *)malloc(len + 1)))
+		return (NULL);
+	ft_strlcpy(s2, s1, len + 1);
+	return (s2);
+}
+
+void	db(char *str)
+{
+	printf("\n-----\n!! check !!\n-----\n\n");
+	printf("%s\n", str);
 	printf("\n-----\n!! check !!\n-----\n\n");
 }
 
 void	add_ls(t_ls ls, struct dirent *dir, struct stat *buf)
 {
-	db();
-	ls.fname = dir->d_name;
+	db("at the start of func named add_ls");
+	ls.fname = ft_strdup(dir->d_name);
+//	ls.fname = dir->d_name;
 	ls.mtime = buf->st_mtimespec.tv_sec;
 	ls.nsec = buf->st_mtimespec.tv_nsec;
 }
@@ -82,8 +97,9 @@ int		main(int ac, char *av[])
 	i = 0;
 	while ((dir = readdir(dp)))
 	{
-		stat(dir->d_name, &buf);
-		add_ls(t_flist[i], &dir, &buf);
+		db("line:88 into while loop");
+		lstat(dir->d_name, &buf);
+		add_ls(t_flist[i], dir, &buf);
 		/* printf ------------------------- */
 		printf("t_flist[%d]->fname : %s\n", i, t_flist[i].fname);
 		printf("t_flist[%d]->mtime : %lu\n", i, t_flist[i].mtime);
