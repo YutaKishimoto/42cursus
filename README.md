@@ -10,7 +10,7 @@ very first own library
 ### 01. gnl
 ### 02. printf
 
-#### ft_mini_ls
+## ft_mini_ls
 
-#### common_test
+## common_test
 test code to confirm fow it(some funcs) works
