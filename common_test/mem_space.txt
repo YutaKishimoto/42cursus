@@ -10,22 +10,26 @@
 <ARRAY>
 	static char st_a1[128];
 	static char st_a2[128] = "this is the static char array.";
+	char a1[128];";
+	char a2[128] = "this is the static char array.";
 	char *str1 = "this is the char pointer [LITERAL];
 	char *str_m = malloc(128);
 ---- VAR ----
 [name]	[value]		[address]
-g1	     255	   de97030
-g2	       0	   de97150
-st_v1	     511	   de97034
-st_v2	       0	   de970c0
-v1	    1023	  e1d69bf8
-v2	      63	  e1d69bf7
+g1	     255	   1254050
+g2	       0	   1254170
+st_v1	     511	   1254054
+st_v2	       0	   12540e0
+v1	    1023	  ee9acae8
+v2	      63	  ee9acae7
 ---- ARRAY ----
-st_a1[0]	       0	   de970d0
-st_a2[0]	     116	   de97040
-*str1	     116	   de96d2c
-*str_m	       0	  54c027f0
+st_a1[0]	       0	   12540f0
+st_a2[0]	     116	   1254060
+a1[0]	      48	  ee9acb70
+a2[0]	     116	  ee9acaf0
+*str1	     116	   1253cd0
+*str_m	       0	  95c027f0
 ---- FUNCTIONS ----
-main	233400896	   de96a40
+main	19216400	   1253810
 printf	1756065476	  68ab6ec4
 malloc	1757244413	  68bd6bfd

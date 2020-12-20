@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 15:59:01 by tyamagis          #+#    #+#             */
-/*   Updated: 2020/12/20 16:45:06 by tyamagis         ###   ########.fr       */
+/*   Updated: 2020/12/21 05:40:23 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int main(void)
 	// ARRAY
 	static char st_a1[128];
 	static char st_a2[128] = "this is the static char array.";
+	char a1[128];
+	char a2[128] = "this is the char array.";
 	char *str1 = "this is the char pointer [LITERAL].";
 	char *str_m = malloc(128);
 
@@ -60,6 +62,8 @@ int main(void)
 	printf("<ARRAY>\n");
 	printf("\tstatic char st_a1[128];\n");
 	printf("\tstatic char st_a2[128] = \"this is the static char array.\";\n");
+	printf("\tchar a1[128];\";\n");
+	printf("\tchar a2[128] = \"this is the static char array.\";\n");
 	printf("\tchar *str1 = \"this is the char pointer [LITERAL];\n");
 	printf("\tchar *str_m = malloc(128);\n");
 	// memory display
@@ -75,6 +79,8 @@ int main(void)
 	printf("---- ARRAY ----\n");
 	printf("st_a1[0]\t%8d\t%10x\n", st_a1[0], st_a1);
 	printf("st_a2[0]\t%8d\t%10x\n", st_a2[0], st_a2);
+	printf("a1[0]\t%8d\t%10x\n", a1[0], a1);
+	printf("a2[0]\t%8d\t%10x\n", a2[0], a2);
 	printf("*str1\t%8d\t%10x\n", *str1, str1);
 	printf("*str_m\t%8d\t%10x\n", *str_m, str_m);
 
