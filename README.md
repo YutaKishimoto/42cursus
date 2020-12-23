@@ -14,6 +14,7 @@ very first own library
   You will recode printf
   
 ## ft_mini_ls
+  ls -1tr
 
 ## common_test
-  test code to confirm fow it(some funcs) works
+  test code to confirm how it(some funcs) works
