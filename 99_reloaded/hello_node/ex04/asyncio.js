@@ -6,21 +6,18 @@
 //   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/12/27 15:14:16 by tyamagis          #+#    #+#             //
-//   Updated: 2020/12/27 17:44:56 by tyamagis         ###   ########.fr       //
+//   Updated: 2020/12/27 18:14:24 by tyamagis         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
-var line = 0;
-
+if (process.argv[2] == undefined)
+{
+	console.log("No Args, RETRY !!");
+	return ;
+}
 require("fs").readFile(process.argv[2], (err, data) => {
-	if (err){
-		console.log("Something went wrong, retry >>");
-	} else {
-		for (var i = 0; i < data.length; i++){
-			if (data[i] === 10){
-				line++;
-			}
-		}
-		console.log(line);
-	}
+	if (err)
+		console.log(err.message);
+	else
+		console.log(data.toString().split("\n").length - 1);
 });
