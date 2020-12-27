@@ -6,7 +6,7 @@
 //   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/12/24 09:26:36 by tyamagis          #+#    #+#             //
-//   Updated: 2020/12/27 18:02:38 by tyamagis         ###   ########.fr       //
+//   Updated: 2020/12/27 20:28:54 by tyamagis         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -21,5 +21,6 @@ try {
 	}
 	console.log(line);
 } catch (err) {
-	console.log(err.message + " -- RETRY with filepath to count lines as argument.");
+	console.log(err.message);
+	console.log("RETRY >>");
 }
