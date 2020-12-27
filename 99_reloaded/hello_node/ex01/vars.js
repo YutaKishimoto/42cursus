@@ -6,7 +6,7 @@
 //   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/12/23 19:54:57 by tyamagis          #+#    #+#             //
-//   Updated: 2020/12/27 10:30:59 by tyamagis         ###   ########.fr       //
+//   Updated: 2020/12/27 20:50:31 by tyamagis         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
@@ -47,8 +47,8 @@ var u;
 console.log(`${s} is a ${typeof(s)}.
 ${n} is a ${typeof(n)}.
 ${o.key} is a ${typeof(o)}.
-${o + ""} is a ${typeof(o)}.
+${o + ""} is an ${typeof(o)}.
 ${!0} is a ${typeof(!0)}.
-${u} is a ${typeof(u)}.`);
+${u} is an ${typeof(u)}.`);
 
 */
