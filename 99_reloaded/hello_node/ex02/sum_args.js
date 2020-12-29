@@ -6,15 +6,14 @@
 //   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/12/24 07:29:59 by tyamagis          #+#    #+#             //
-//   Updated: 2020/12/24 10:33:04 by tyamagis         ###   ########.fr       //
+//   Updated: 2020/12/29 16:03:25 by tyamagis         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
 var i = 2;
 var sum = 0;
 
-if (process.argv.length == 2)
-{
+if (process.argv.length == 2){
 	console.log(" ! -- Error -- ! ");
 	console.log("no input. Retry >>");
 } else {
