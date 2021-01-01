@@ -6,12 +6,11 @@
 //   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        //
 //                                                +#+#+#+#+#+   +#+           //
 //   Created: 2020/12/27 15:14:16 by tyamagis          #+#    #+#             //
-//   Updated: 2020/12/29 16:42:51 by tyamagis         ###   ########.fr       //
+//   Updated: 2021/01/01 23:14:07 by tyamagis         ###   ########.fr       //
 //                                                                            //
 // ************************************************************************** //
 
-if (process.argv[2] == undefined)
-{
+if (process.argv[2] == undefined){
 	console.log("No Args, RETRY >>");
 	return ;
 }
