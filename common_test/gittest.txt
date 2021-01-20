@@ -1,1 +1,1 @@
-this is the test only confirming git config.
+this is the test only confirming git config 2.
