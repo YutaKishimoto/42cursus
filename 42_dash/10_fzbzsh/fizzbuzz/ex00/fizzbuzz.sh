@@ -8,3 +8,5 @@ do
   echo $i
  fi
 done
+
+# SHELL SCRIPT ZENZEN WAKARAN
