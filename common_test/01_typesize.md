@@ -2,7 +2,7 @@
 
 ## BASIC Types
 
-[char] is	1 Byte.
+[char] is	1 Byte.　
 CHAR_min =	-128
 CHAR_MAX =	127
 
