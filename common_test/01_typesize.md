@@ -2,8 +2,8 @@
 
 ## BASIC Types
 
-[char] is	1 Byte.　
-CHAR_min =	-128
+[char] is	1 Byte. 
+CHAR_min =	-128  
 CHAR_MAX =	127
 
 [short] is	2 Byte.
