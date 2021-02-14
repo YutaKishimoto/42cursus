@@ -6,17 +6,31 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/20 23:35:42 by tyamagis          #+#    #+#             */
-/*   Updated: 2021/02/13 16:18:23 by tyamagis         ###   ########.fr       */
+/*   Updated: 2021/02/15 06:20:32 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** ----------------
 ** how to comment
-**
 ** LIKE THIS.
-** and it must be out of func scope.
 ** ----------------
+** - english (ascii) only
+** - it must be out of func scope.
+** - no space at the end of line.
+*/
+
+/*
+** if NOT ascii char in comment, then
+** = = = = = = = = = = = = =
+** >> /usr/bin/norminette:110:in `encode': "\xE3" on US-ASCII
+** >> (Encoding::InvalidByteSequenceError)
+** = = = = = = = = = = = = =
+** and 8 lines start with
+** = = = = = = = = = = = = =
+** >> from /usr/bin/norminette:.....
+** = = = = = = = = = = = = =
+** will be printed.
 */
 
 void	f1(void)
@@ -36,11 +50,11 @@ void	f4(void)
 }
 
 /*
+** -----------------------
 ** 6th func is forbidden.
-** 
+** -----------------------
 ** void	f5(void)
 ** {
-** 
 ** }
 */
 
