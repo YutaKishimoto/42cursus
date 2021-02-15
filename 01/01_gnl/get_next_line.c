@@ -6,7 +6,7 @@
 /*   By: tyamagis <tyamagis@student.42tokyo.>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/13 08:59:55 by tyamagis          #+#    #+#             */
-/*   Updated: 2021/02/15 15:26:03 by tyamagis         ###   ########.fr       */
+/*   Updated: 2021/02/15 23:36:56 by tyamagis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,24 @@ int	get_next_line(int fd, char **line)
 			/* nl doesnt exist */
 				/* process */
 	}
-	/* ft_a ki ta */
 	return (1);
+}
+
+/*
+** TEST MAIN.C
+*/
+
+
+#include <fcntl.h>
+#include <stdio.h>
+
+int main(void){
+	int fd;
+	int r = 1;
+	char **line = (char **)malloc(sizeof(char *));
+
+	fd = open(path, );
+	while (r = get_next_line(fd, line))
+		printf("%s", line);
+	return (0);
 }
