@@ -16,7 +16,7 @@
 int main(void)
 {
 /* ------------------
-** TEST CASE 1:
+** TEST CASE 1
 ** too many malloc() then how to allocate mems.
 ** ------------------
 
@@ -40,14 +40,48 @@ int main(void)
 */
 
 /* ------------------
-** TEST CASE 2:
-** max malloc size ?? // NOT COMPLETE
-** ------------------
+** TEST CASE 2
+** max malloc size ??
+// N O T C O M P L E T E
+ ** ------------------
 
-char *ptr;
+	char *ptr;
 
 	ptr = malloc(140737488000000);
 	printf("ptr : %10x", ptr);
+	return (0);
+*/
 
+/* ------------------
+** TEST CASE 3
+** malloc and free
+** ------------------
+*/
+	char *ptr1;
+	char *ptr2;
+
+	printf("char *ptr1;\n");
+	printf("char *ptr2;\n");
+	printf(" - ptr1 : %x\n", ptr1);
+	printf(" - ptr2 : %x\n", ptr2);
+	/* ptr2 is always 0, but ptr1 is not. why??? */
+	ptr1 = malloc(16);
+	ptr2 = ptr1 + 8;
+	printf("ptr1 = malloc(16);\nptr2 = ptr1 + 8\n");
+	printf(" - ptr1 : %x\n", ptr1);
+	printf(" - ptr2 : %x\n", ptr2);
+	int i = 0;
+	while (i < 20){
+		*(ptr1 + i) = i;
+		printf(" - ptr1 + i : %x, *(ptr1 + i) : %d, i : %d\n", (ptr1 + i), *(ptr1 + i), i);
+		i++;
+	}
+	ptr1[26] = 'A';
+	/* we can access and write over the allocated range.(there are no warning.) */
+	printf("%c", ptr1[26]);
+	// free(ptr2);
+	/* free function cannot free the not malloced pointer. this cause abort. */
+	printf(" - ptr1 : %x\n", ptr1);
+	printf(" - ptr2 : %x\n", ptr2);
 	return (0);
 }
