@@ -13,7 +13,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-int malloc_buf(char **line, int i)
+int free_buf(char **line, int i)
 {
 	while (i < 0)
 		free(line[--i]);
@@ -52,7 +52,7 @@ int	get_next_line(int fd, char **line)
 	{
 		line[i] = (char *)malloc(BUFFER_SIZE));
 		if (!*line)
-			return (malloc_buf(line, i));
+			return (free_buf(line, i));
 		rbyte = read(fd, line[i++], BUFFER_SIZE);
 		if (!rbyte)
 		{
