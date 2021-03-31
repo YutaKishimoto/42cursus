@@ -20,7 +20,7 @@ int malloc_buf(char **line, int i)
 	return (-1);
 }
 
-int check_nl(char **line, int i)
+int check_nl(char **line, int i, char *tgt_fd)
 {
 	int j;
 
@@ -31,7 +31,7 @@ int check_nl(char **line, int i)
 		{
 			line[i][j] = '\0';
 			if ((j + 1) < BUFFER_SIZE)
-				tgt_fd[fd] = line[i][j + 1];
+				tgt_fd = &line[i][j + 1];
 			return (1);
 		}
 		j++;
@@ -43,7 +43,7 @@ int	get_next_line(int fd, char **line)
 	char		*buf;
 	static char	*tgt_fd[256];
 	int			i;
-	s_size_t	rbyte;
+	ssize_t		rbyte;
 
 	if (((fd | 255) != 255) || !line || (BUFFER_SIZE <= 0))
 		return (-1);
@@ -59,13 +59,14 @@ int	get_next_line(int fd, char **line)
 			tgt_fd[fd] = 0;
 			return (0);
 		}
+		if (check_nl(line, i, tgt_fd[fd]))
+			return (1);
 	}
 	return (1);
 }
 
 /*
 ** TEST MAIN.C
-*/
 
 #include <fcntl.h>
 #include <stdio.h>
@@ -80,3 +81,5 @@ int main(void){
 		printf("%s", line);
 	return (0);
 }
+
+*/
