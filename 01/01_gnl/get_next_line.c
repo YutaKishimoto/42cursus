@@ -53,6 +53,8 @@ int	get_next_line(int fd, char **line)
 		line[i] = (char *)malloc(BUFFER_SIZE));
 		if (!*line)
 			return (free_buf(line, i));
+		if (tgt_fd[fd])
+			line[i++] = tgt_fd[fd];
 		rbyte = read(fd, line[i++], BUFFER_SIZE);
 		if (!rbyte)
 		{
@@ -62,7 +64,7 @@ int	get_next_line(int fd, char **line)
 		if (check_nl(line, i, tgt_fd[fd]))
 			return (1);
 	}
-	return (1);
+	return (-1);
 }
 
 /*
